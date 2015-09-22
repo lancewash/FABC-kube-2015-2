@@ -5204,7 +5204,6 @@ Navigation Styles
   border-top: 2px solid rgba(217, 123, 41, 0.35);
   color: white;
   font-family: "montserratbold";
-  margin-top: -1px;
   display: block;
   height: 120px;
   letter-spacing: .05em;
@@ -5220,6 +5219,7 @@ Navigation Styles
 
 .banner-links-wrap .banner-link-items a:hover {
   border-color: white;
+  margin-top: -2px;
 }
 
 .service-time-link {

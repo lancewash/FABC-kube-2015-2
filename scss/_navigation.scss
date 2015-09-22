@@ -265,18 +265,18 @@ Navigation Styles
             position: relative;
             text-align: center;
 
-            &:last-child {
+            /*&:last-child {
                  border-right: 1px solid rgba(0,0,0,.05);
-             }
+             }*/
             &:not(first-child) {
                 border-left: 1px solid rgba(0,0,0,.0);
             }
-            &:first-child {
+            /*&:first-child {
                 background: url("../img/modal.png") no-repeat 90% center;
                 padding: .5em 0;
                 font-size: .75rem;
                 text-transform: uppercase;
-            }
+            }*/
         }
     }
     
@@ -285,7 +285,7 @@ Navigation Styles
     }
     p, a {
         font-size: .7rem;
-        padding: .5em 0;
+        padding: .5em 0 .65em;
     }
     a {
 

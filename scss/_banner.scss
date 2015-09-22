@@ -38,7 +38,7 @@
 }
 .banner-wrap {
   overflow: hidden;
-  //position: absolute;
+  position: relative;
   width: 100%;
   height: 360px;
 }
@@ -67,6 +67,73 @@
        border: none;
      }
    }*/
+}
+.banner-links-wrap {
+  background: rgba(0,0,0,.25);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+
+  .banner-links {
+
+    margin: 0 auto;
+    max-width: 80em;
+  }
+  
+  .banner-link-items {
+    background: rgba(0, 0, 0, .5);
+    border-left: 1px solid rgba(255,255,255,.25);
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    
+    &:hover {
+      background: rgba(217, 123, 41, .5);
+    }
+
+    &:last-child {
+      border-right: 1px solid rgba(255,255,255,.25);
+    }
+    
+    a {
+
+      border-top: 2px solid rgba(217, 123, 41, .35);
+      color: rgba(255, 255, 255, 1);
+      font-family: "montserratbold";
+      margin-top: -1px;
+      display: block;
+      height: 120px;
+      letter-spacing: .05em;
+      padding: 4.5em 0 0;
+      text-align: center;
+      text-decoration: none;
+      -webkit-transition: all 1s ease-out;
+      -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+      -o-transition: all .25s ease-out;
+      transition: all .25s ease-out;
+      
+      &:hover {
+        //background: rgba(0, 0, 0, .5);
+        border-color: rgba(255,255,255,1);
+      }
+    }
+  }
+}
+.service-time-link {
+  background: url("../img/time.png") no-repeat 50% 20%;
+}
+.calendar-link {
+  background: url("../img/calendar.png") no-repeat 50% 20%;
+}
+.sunday-chron-link {
+  background: url("../img/sunday-chron.png") no-repeat 50% 20%;
+}
+.sermons-link {
+  background: url("../img/sermons.png") no-repeat 50% 20%;
 }
 .banner-1 {
   background: url("../img/banner-img/banner-img-4.jpg") 0 0;
@@ -310,7 +377,8 @@ Slick Slider
 {
   position: absolute;
   bottom: -20px;
-  display: block;
+  //display: block;
+  display: none !important;
   margin: 0 0 2rem 0;
   width: 100%;
   padding: 0;

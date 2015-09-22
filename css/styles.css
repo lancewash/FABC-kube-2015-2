@@ -4877,21 +4877,19 @@ Navigation Styles
   max-width: 180px;
   position: relative;
   text-align: center;
-}
-
-.nav-top ul li:last-child {
-  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  /*&:last-child {
+                 border-right: 1px solid rgba(0,0,0,.05);
+             }*/
+  /*&:first-child {
+                background: url("../img/modal.png") no-repeat 90% center;
+                padding: .5em 0;
+                font-size: .75rem;
+                text-transform: uppercase;
+            }*/
 }
 
 .nav-top ul li:not(first-child) {
   border-left: 1px solid transparent;
-}
-
-.nav-top ul li:first-child {
-  background: url("../img/modal.png") no-repeat 90% center;
-  padding: .5em 0;
-  font-size: .75rem;
-  text-transform: uppercase;
 }
 
 .nav-top nav, .nav-top p {
@@ -4900,7 +4898,7 @@ Navigation Styles
 
 .nav-top p, .nav-top a {
   font-size: .7rem;
-  padding: .5em 0;
+  padding: 0.5em 0 0.65em;
 }
 
 .nav-top a {
@@ -5140,6 +5138,7 @@ Navigation Styles
 
 .banner-wrap {
   overflow: hidden;
+  position: relative;
   width: 100%;
   height: 360px;
 }
@@ -5168,6 +5167,75 @@ Navigation Styles
        border: none;
      }
    }*/
+}
+
+.banner-links-wrap {
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+.banner-links-wrap .banner-links {
+  margin: 0 auto;
+  max-width: 80em;
+}
+
+.banner-links-wrap .banner-link-items {
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.banner-links-wrap .banner-link-items:hover {
+  background: rgba(217, 123, 41, 0.5);
+}
+
+.banner-links-wrap .banner-link-items:last-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.banner-links-wrap .banner-link-items a {
+  border-top: 2px solid rgba(217, 123, 41, 0.35);
+  color: white;
+  font-family: "montserratbold";
+  margin-top: -1px;
+  display: block;
+  height: 120px;
+  letter-spacing: .05em;
+  padding: 4.5em 0 0;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.banner-links-wrap .banner-link-items a:hover {
+  border-color: white;
+}
+
+.service-time-link {
+  background: url("../img/time.png") no-repeat 50% 20%;
+}
+
+.calendar-link {
+  background: url("../img/calendar.png") no-repeat 50% 20%;
+}
+
+.sunday-chron-link {
+  background: url("../img/sunday-chron.png") no-repeat 50% 20%;
+}
+
+.sermons-link {
+  background: url("../img/sermons.png") no-repeat 50% 20%;
 }
 
 .banner-1 {
@@ -5399,7 +5467,7 @@ Slick Slider
 .slick-dots {
   position: absolute;
   bottom: -20px;
-  display: block;
+  display: none !important;
   margin: 0 0 2rem 0;
   width: 100%;
   padding: 0;

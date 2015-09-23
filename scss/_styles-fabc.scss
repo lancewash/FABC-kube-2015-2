@@ -6,11 +6,12 @@
   flex-wrap: wrap;
 
   &:not([class^="p-"]) {
+    min-height: 300px;
     padding-top: 5em;
   }
 
   .row {
-    margin-bottom: $baseLineHeight * 2em;
+    //margin-bottom: $baseLineHeight * 2em;
     //margin-bottom: 3em;
     overflow: hidden;
     display: flex;
@@ -19,18 +20,7 @@
     &.hidden-links {
       margin-bottom: 0;
     }
-    .content-item {
-      display: flex;
-      flex-direction: column;
-      padding-bottom: 5em;
-      
-      h2 {
-        text-align: left;
-      }
-      img {
-        @include rem('margin-bottom', $baseLineInEms);
-      }
-    }
+
   }
   h2 {
     margin-bottom: 1em;
@@ -53,7 +43,7 @@
   
   h1 {
     line-height: 1.5em;
-    //margin-bottom: 1em;
+    margin-bottom: 1em;
     padding-bottom: .5em;
     position: relative;
     text-align: center;
@@ -73,6 +63,35 @@
       width: 10%;
     }
   }
+}
+.content-item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 5em;
+
+  h2 {
+    text-align: left;
+  }
+  img {
+    @include rem('margin-bottom', $baseLineInEms);
+  }
+}
+.inverted-wrap {
+  background: #344B56;
+
+  h1, h2, h3, p {
+    color: rgba(255,255,255,.9);
+  }
+  a {
+    color: rgba(255,255,255,.75);
+  }
+}
+a {
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 [class^="unit-"] {
 
@@ -111,13 +130,25 @@
 }
 .p-1 {
   background: url("../img/trans-80.png"),
-  url("../img/background/fabc-bg-1.jpg");
+  url("../img/parallax/fabc-img-01.jpg");
   background-repeat: repeat, no-repeat;
   //height: 200px;
 }
 .p-2 {
   background: url("../img/trans-80.png"),
-  url("../img/banner-img/banner-img-church.jpg");
+  url("../img/parallax/fabc-img-02.jpg");
+  background-repeat: repeat, no-repeat;
+  //height: 200px;
+}
+.p-3 {
+  background: url("../img/trans-80.png"),
+  url("../img/parallax/fabc-img-01.jpg");
+  background-repeat: repeat, no-repeat;
+  //height: 200px;
+}
+.p-4 {
+  background: url("../img/trans-80.png"),
+  url("../img/parallax/fabc-img-04.jpg");
   background-repeat: repeat, no-repeat;
   //height: 200px;
 }
@@ -141,4 +172,47 @@
 .blocks-wrap {
   border: 1px solid rgba(0,0,0,.1);
   padding: 3em 1.5em 0;
+}
+li {
+  list-style: none;
+}
+.google-map {
+  margin-bottom: 2px;
+  position: relative;
+  padding-bottom: 50%; // This is the aspect ratio
+  height: 400px;
+  overflow: hidden;
+
+  iframe {
+    border: none !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+.inverted-wrap {
+  
+  .row {
+    padding-top: 3em;
+  }
+
+  //&[class*="p-"] {
+  //  padding-bottom: 5em;
+  //}
+}
+
+.episode .podcast_name, .episode .episode_name, .episode .meta p, .episode .description {
+  color: rgba(255,255,255,.8) !important;
+  //margin: 0;
+}
+div.episode div.meta {
+  color: rgba(255,255,255,.9) !important;
+  padding: 0 !important;
+  
+  p {
+    
+  }
 }

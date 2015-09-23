@@ -26,7 +26,9 @@
 .block-first {
     clear: both;
 }
-
+[class*="blocks-"] img {
+    margin-bottom: 1em !important;
+}
 /* =Responsive
 -----------------------------------------------------------------------------*/
 @media only screen and (max-width: 767px) {

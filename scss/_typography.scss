@@ -26,6 +26,7 @@ h6 {
     color: $colorHeadings;
     text-rendering: optimizeLegibility;
     text-transform: uppercase;
+    letter-spacing: .075em;
 }
 h1 {
     font-size: $h1FontSize;

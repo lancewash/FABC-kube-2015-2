@@ -16,7 +16,7 @@
   }
 }
 .banner {
-  height: 360px;
+  height: 480px;
   overflow: hidden;
 
 
@@ -40,14 +40,14 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 360px;
+  height: 480px;
   
   .subpage & {
     height: 200px;
   }
 }
 .banner-img {
-  height: 360px;
+  height: 480px;
   position: relative;
 
   /* h1, h2 {
@@ -73,11 +73,11 @@
    }*/
 }
 .banner-head-wrap {
-  //background: rgba(0,0,0,.25);
+  background: rgba(0,0,0,.25);
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 125px;
 
   .banner-head {
 
@@ -94,8 +94,11 @@
 
 
   .banner-head-items {
-    background: rgba(0, 0, 0, .5);
+    //background: url("../img/expand.png") no-repeat 90% 5% rgba(0,0,0,.5);
+    //background-size: 0%;
+    background: rgba(0,0,0,.5);
     border-left: 1px solid rgba(255,255,255,.25);
+    height: 125px;
     position: relative;
     -webkit-transition: all 1s ease-out;
     -moz-transition: all .25s ease-out;
@@ -104,7 +107,8 @@
     transition: all .25s ease-out;
     
     //&:hover {
-    //  background: rgba(217, 123, 41, .25);
+    //  background: url("../img/expand.png") no-repeat 90% 5%;
+    //  background-size: 10%;
     //}
 
     &:last-child {
@@ -137,7 +141,7 @@
       font-family: "montserratbold";
       //margin-top: -1px;
       display: block;
-      height: 115px;
+      height: 125px;
       letter-spacing: .05em;
       padding: 4em 0 0;
       text-align: center;
@@ -156,10 +160,12 @@
       }
     }
   }
-  span {
-    border-radius: 3px 3px 0 0;
+  .button-banner {
+    //border-radius: 3px 3px 0 0;
     display: inline-block;
-    padding: .5em 2em 1em;
+    margin-top: 1.75rem;
+    padding: 1em 2em .5em;
+    width: 100%;
     -webkit-transition: all 1s ease-out;
     -moz-transition: all .25s ease-out;
     -ms-transition: all .25s ease-out;
@@ -168,20 +174,42 @@
 
   }
 }
+.banner-items {
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all .25s ease-out;
+  -ms-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+  font-size: 75%;
 
+  &:hover .button-banner {
+    //box-shadow: 0 0 10px rgba(0,0,0,.5);
+    background: rgba(255,255,255,1);
+    //font-size: 75%;
+    margin-top: 1.75rem;
+  }
+  span {
+    display: block;
+    font-size: .9rem;
+    margin-top: 1.25rem;
+  }
+  
+  &:hover .banner-items {
+    margin-top: 0;
+  }
+}
 .service-time-link {
   background: url("../img/time.png") no-repeat 50% 20%;
   border-color: rgba(235,193,52,1);
   
   &:hover {
-    background: url("../img/expand.png") no-repeat 50% 20% rgba(235,193,52,.8);
-
+    background: url("../img/time.png") no-repeat 50% 20% rgba(235,193,52,.75);
   }
-  &:hover span {
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
-    background: rgba(255,255,255,1);
-    color: darken(rgba(235,193,52,1),15%);
-    margin-top: 1em;
+  .button-banner {
+    background: rgba(235,193,52,1);
+  }
+  &:hover .button-banner {
+    color: rgba(235,193,52,1);
   }
 }
 .calendar-link {
@@ -189,13 +217,13 @@
   border-color: rgba(0,93,131,1);
 
   &:hover {
-    background: url("../img/expand.png") no-repeat 50% 20% rgba(0,93,131,.8);
+    background: url("../img/calendar.png") no-repeat 50% 20% rgba(0,93,131,1);
   }
-  &:hover span {
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
-    background: rgba(255,255,255,1);
+  .button-banner {
+    background: rgba(0,93,131,1);
+  }
+  &:hover .button-banner {
     color: rgba(0,93,131,1);
-    margin-top: 1em;
   }
 }
 .sunday-chron-link {
@@ -203,13 +231,13 @@
   border-color: rgba(191,51,19,1);
 
   &:hover {
-    background: url("../img/expand.png") no-repeat 50% 20% rgba(191,51,19,.8);
+    background: url("../img/sunday-chron.png") no-repeat 50% 20% rgba(191,51,19,1);
   }
-  &:hover span {
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
-    background: rgba(255,255,255,1);
+  .button-banner {
+    background: rgba(191,51,19,1);
+  }
+  &:hover .button-banner{
     color: rgba(191,51,19,1);
-    margin-top: 1em;
   }
 }
 .sermons-link {
@@ -217,30 +245,30 @@
   border-color: rgba(120,147,48,1);
 
   &:hover {
-    background: url("../img/expand.png") no-repeat 50% 20% rgba(120,147,48,.8);
+    background: url("../img/sermons.png") no-repeat 50% 20% rgba(120,147,48,1);
   }
-  &:hover span {
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
-    background: rgba(255,255,255,1);
+  .button-banner {
+    background: rgba(120,147,48,1);
+  }
+  &:hover .button-banner {
     color: rgba(134,145,77,1);
-    margin-top: 1em;
   }
 
 }
 .banner-1 {
   background: url("../img/banner-img/banner-img-4.jpg") 0 0;
   //background-position: 0 0 !important;
-  height: 360px;
+  height: 480px;
 }
 .banner-2 {
   background: url("../img/banner-img/banner-img-3.jpg") 0 0;
   //background-position: 0 0 !important;
-  height: 360px;
+  height: 480px;
 }
 .banner-3 {
   background: url("../img/banner-img/banner-img-2.jpg") 0 0;
   //background-position: 0 0 !important;
-  height: 360px;
+  height: 480px;
 }
 /*
 ======================================
@@ -271,7 +299,7 @@ Slick Slider
   position: relative;
   overflow: hidden;
   display: block;
-  height: 360px;
+  height: 480px;
   margin: 0;
   padding: 0;
 
@@ -298,7 +326,7 @@ Slick Slider
   left: 0;
   top: 0;
   display: block;
-  height: 360px;
+  height: 480px;
 
   &:before,
   &:after {

@@ -142,14 +142,23 @@ p, a {
 .divider {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid transparent;
-  margin: 2em 0 3.6em;
-  max-width: 80%;
+  margin: 2em auto 2em;
+  width: 300px;
 }
 .list-block {
 
   .unit-50 {
 
     &:nth-child(odd) {
+      margin-left: 0;
+    }
+    //&:last-child {
+    //  margin-left: 25%;
+    //}
+  }
+  .unit-33 {
+
+    &:nth-child(3n+4) {
       margin-left: 0;
     }
   }
@@ -241,7 +250,15 @@ main {
   //  padding-bottom: 5em;
   //}
 }
-
+.centered-content {
+  h1, h2, h3, h4, p, ul, li {
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin: 0 auto 2rem;
+  }
+}
 .content-item .episode .podcast_name,
 .content-item .episode .episode_name,
 .content-item .episode .meta p,

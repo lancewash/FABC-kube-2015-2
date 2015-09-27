@@ -4958,7 +4958,7 @@ select.unit-100 {
   color: white;
   text-transform: uppercase;
   color: white;
-  padding: 22px 0;
+  padding: 22px 0 21px;
   text-transform: uppercase;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
@@ -6433,6 +6433,10 @@ button:hover, .button:hover {
 
 .content-wrap:not([class^="p-"]) {
   min-height: 300px;
+}
+
+.content-wrap.intro {
+  padding: 3em 0;
 }
 
 .content-wrap .row {

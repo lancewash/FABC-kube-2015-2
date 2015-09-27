@@ -9,7 +9,9 @@
     min-height: 300px;
     //padding-top: 5em;
   }
-
+  &.intro {
+    padding: 3em 0;
+  }
   .row {
     //margin-bottom: $baseLineHeight * 2em;
     //margin-bottom: 3em;

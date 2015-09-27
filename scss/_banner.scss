@@ -95,6 +95,10 @@
     -o-transition: all .5s ease-out;
     transition: all .5s ease-out;
 
+     .subpage & {
+       bottom: 0;
+     }
+
   }
   
   h1 {

@@ -493,9 +493,16 @@ Navigation Styles
     }
 }
 .sticky {
-    background: rgba(0,0,0,.05);
+    background: #efefef;
+    //height: 60px;
     margin-left: -2em;
     margin-right: -2em;
+    
+    &.stuck {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
 
     a {
         padding: 1rem 0;

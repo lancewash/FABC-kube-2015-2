@@ -5095,9 +5095,15 @@ Navigation Styles
 }
 
 .sticky {
-  background: rgba(0, 0, 0, 0.05);
+  background: #efefef;
   margin-left: -2em;
   margin-right: -2em;
+}
+
+.sticky.stuck {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .sticky a {
@@ -6604,6 +6610,10 @@ p, a {
   width: 300px;
 }
 
+.list-block .unit-50 {
+  min-height: 120px;
+}
+
 .list-block .unit-50:nth-child(odd) {
   margin-left: 0;
 }
@@ -6675,6 +6685,10 @@ li {
   left: 0;
   width: 100% !important;
   height: 100% !important;
+}
+
+main {
+  height: 100vh;
 }
 
 main .row {

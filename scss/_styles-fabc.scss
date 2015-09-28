@@ -8,6 +8,10 @@
   &:not([class^="p-"]) {
     min-height: 300px;
     //padding-top: 5em;
+    
+    .subpage & {
+      //margin-top: 3em;
+    }
   }
   &.intro {
     padding: 3em 0;
@@ -150,6 +154,7 @@ p, a {
 .list-block {
 
   .unit-50 {
+    min-height: 120px;
 
     &:nth-child(odd) {
       margin-left: 0;
@@ -243,6 +248,7 @@ li {
 }
 
 main {
+  height: 100vh;
   
   .row {
     padding-top: 3em;

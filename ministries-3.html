@@ -8,7 +8,7 @@
     <script src="js/modernizr.js"></script>
 </head>
 <body class="subpage">
-<div class="page-wrap">
+<div class="page-wrap" id="top">
     <header>
         <!-- Top Navigation -->
         <div class="[ container ] nav-top">
@@ -17,7 +17,7 @@
                     <p>First African Baptist Church &nbsp; | &nbsp; <em>Darby Township, Pennsylvania</em></p>
                 </div>
                 <div class="[ unit-20 ] img-link">
-                    <a href="https://www.biblegateway.com/" target="_blank"><img src="img/bible-gateway-logo.png"
+                    <a href="https://www.biblegateway.com/" target="_blank"><img src="img/bible-gateway.png"
                                                                                  alt=""/></a>
                 </div>
                 <div class="[ unit-50 ] right">
@@ -76,7 +76,7 @@
         <div class="container">
             <nav class="navbar fullwidth list-block-nav sticky">
                 <ul>
-                    <!--<li><a href="">Home</a></li>-->
+                    <li><a href="#top" class="scroll"><i class="arrow up icon"></i></a></li>
                     <li><a href="#officiary" class="scroll">Officiary</a></li>
                     <li><a href="#office-staff" class="scroll">Office Staff</a></li>
                     <li><a href="#service" class="scroll">Service</a></li>
@@ -85,13 +85,14 @@
                     <li><a href="#service" class="scroll">Youth</a></li>
                     <li><a href="#officiary" class="scroll">Music</a></li>
                     <li><a href="#office-staff" class="scroll">Houses</a></li>
-                    <li><a href="#service" class="scroll">B.W. Watkins MSM</a></li>
+                    <li><a href="#service" class="scroll">B.W. Watkins</a></li>
+                    <li><a href="#top" class="scroll"><i class="arrow up icon"></i></a></li>
                 </ul>
             </nav>
             <!--<i class="arrow down icon centered"></i>-->
         </div>
         <div class="[ container ] content-wrap centered-content">
-            <div class="row">
+            <div class="row" id="officiary">
                 <div class="unit-20 centered">
                     <img class="circular" src="img/ministries.jpg" alt=""/>
                 </div>
@@ -120,7 +121,7 @@
                     </div>
                 </div>
             </div>
-            <div class="divider" id=""></div>
+            <div class="divider" id="office-staff"></div>
             <!-- Ministries 2 -->
             <div class="row">
                 <div class="unit-20 centered">
@@ -158,6 +159,51 @@
                             <div class="unit-50">
                                 <p><strong>Church Clerk</strong><br>
                                     Sister Deborah Wray</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divider" id="service"></div>
+            <!-- Ministries 3 -->
+            <div class="row">
+                <div class="unit-20 centered">
+                    <img class="circular" src="img/ministries.jpg" alt=""/>
+                </div>
+                <div class="unit-50 centered">
+                    <h3>Ministry of Service</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem totam deserunt
+                        adipisci, nostrum
+                        asperiores suscipit optio reprehenderit, nemo similique cum harum nulla. Unde
+                        placeat doloremque, id
+                        necessitatibus odio neque alias est recusandae ullam! Quasi numquam magni facilis,
+                        suscipit illo,
+                        corrupti,
+                        expedita totam, voluptatem voluptate qui officiis? Laudantium sit molestiae ex,
+                        neque vero rem nulla,
+                        iure.</p>
+
+                    <div class="unit-100 list-block">
+                        <div class="unit-100 list-block">
+                            <div class="unit-50">
+                                <p><strong>Audio, Video and Tape Ministry</strong><br>
+                                    Brother Gregory Eldridge Jr.<br>
+                                    Ministry Leader</p>
+                            </div>
+                            <div class="unit-50">
+                                <p><strong>B.W. Watkins MSM</strong><br>
+                                    Sister Joyce Barnes, Ministry Leader</p>
+                            </div>
+
+                            <div class="unit-50">
+                                <p><strong>Comfort Care Supporters</strong><br>
+                                    Deaconess Denise Stewart<br>Ministry Leader</p>
+                            </div>
+                            <div class="unit-50">
+                                <p><strong>Comfort Care Supporters</strong><br>
+                                    Sister Beverly Thompson<br>Ministry Leader</p>
                             </div>
 
                         </div>
@@ -417,6 +463,44 @@
         });
     });
 </script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/sticky.js"></script>
+<script>
+//    $(function(){ // document ready
+//        if (!!$('.sticky').offset()) { // make sure ".sticky" element exists
+//            var stickyTop = $('.sticky').offset().top; // returns number
+//            $(window).scroll(function(){ // scroll event
+//                var windowTop = $(window).scrollTop(); // returns number
+//                if (stickyTop < windowTop){
+//                    $('.sticky').css({ position: 'fixed', top: 0 });
+//                }
+//                else {
+//                    $('.sticky').css('position','static');
+//                }
+//            });
+//        }
+//    });
 
+
+var sticky = new Waypoint.Sticky({
+    element: $('.sticky')[0]
+});
+</script>
+<script>
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 750);
+        });
+    });
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 800) {
+            $(".scroll.right").fadeIn();
+        } else {
+            $(".scroll.right").fadeOut();
+        }
+    });
+
+</script>
 </body>
 </html>

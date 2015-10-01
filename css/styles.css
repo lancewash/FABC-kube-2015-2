@@ -6622,6 +6622,28 @@ p, a {
   width: 300px;
 }
 
+.row .profile-link {
+  margin-left: 8%;
+  width: 28%;
+}
+
+.row .profile-link.unit-20 {
+  width: 17%;
+}
+
+.row .profile-link p {
+  text-align: center;
+  margin-top: 1rem;
+  padding: .5rem 0;
+  border-bottom: 1px dotted transparent;
+  border-top: 1px dotted transparent;
+}
+
+.row .profile-link:hover p {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
 .list-block .unit-50 {
   min-height: 100px;
 }

@@ -1,5 +1,4 @@
 
-
 .content-wrap {
 
   display: flex;
@@ -8,7 +7,7 @@
   &:not([class^="p-"]) {
     min-height: 300px;
     //padding-top: 5em;
-    
+
     .subpage & {
       //margin-top: 3em;
     }
@@ -22,11 +21,11 @@
     overflow: hidden;
     display: flex;
     width: 100%;
-    
+
     .subpage & {
       display: block;
     }
-    
+
     &.hidden-links {
       margin-bottom: 0;
     }
@@ -50,7 +49,7 @@
       width: 50px;
     }
   }
-  
+
   h1 {
     line-height: 1.5em;
     margin-bottom: 1em;
@@ -74,6 +73,7 @@
     }
   }
 }
+
 .list-wrap {
 
   padding-bottom: 3.2em;
@@ -85,6 +85,7 @@
     margin-bottom: 3em;
   }
 }
+
 //.intro-content {
 //  padding: 3em 0;
 //}
@@ -100,19 +101,21 @@
     @include rem('margin-bottom', $baseLineInEms);
   }
 }
+
 .inverted-wrap {
   background: #344B56;
 
   h1, h2, h3, p {
-    color: rgba(255,255,255,.9);
+    color: rgba(255, 255, 255, .9);
   }
   strong {
-    color: rgba(255,255,255,1);
+    color: rgba(255, 255, 255, 1);
   }
   a {
-    color: rgba(255,255,255,.75);
+    color: rgba(255, 255, 255, .75);
   }
 }
+
 p, a {
   text-decoration: none;
   -webkit-transition: all 0.25s ease-in;
@@ -121,6 +124,7 @@ p, a {
   -o-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
 }
+
 [class^="unit-"] {
 
   &.content-item {
@@ -128,8 +132,9 @@ p, a {
     position: relative;
   }
 }
+
 .back-to-top {
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, .5);
   //border: 1px solid rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   color: white;
@@ -139,6 +144,7 @@ p, a {
   text-align: center;
   text-decoration: none;
 }
+
 .logo {
   background: url("../img/fabc-logo.png") no-repeat;
   display: block;
@@ -154,38 +160,89 @@ p, a {
   -ms-transition: all 0.25s ease-in;
   -o-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
-  
+
   &:hover {
     margin-top: 18px;
   }
 }
+
 .divider {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid transparent;
   margin: 0 auto 1em;
   width: 300px;
 }
+
 .row .profile-link {
   margin-left: 8%;
+  position: relative;
   width: 28%;
-  
-   &.unit-20 {
+
+  &.unit-20 {
     width: 17%;
   }
+  //&:after {
+  //  content: "";
+  //  background: url(../img/plus.png) no-repeat #000;
+  //  width: 28px;
+  //  height: 28px;
+  //  display: block;
+  //  position: absolute;
+  //  left: 50%;
+  //  //margin: -30px auto -30px -30px;
+  //  bottom: 0;
+  //}
 
   p {
     text-align: center;
     margin-top: 1rem;
     padding: .5rem 0;
-    border-bottom: 1px dotted rgba(0,0,0,0);
-    border-top: 1px dotted rgba(0,0,0,0);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0);
+    border-top: 1px dotted rgba(0, 0, 0, 0);
+
+    &:after {
+      content: "";
+      background: url(../img/plus.png) no-repeat;
+      width: 30px;
+      height: 30px;
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 33%;
+      right: 0;
+      margin: 0 auto;
+    }
   }
 
   &:hover p {
-    border-bottom: 1px solid rgba(0,0,0,.2);
-    border-top: 1px solid rgba(0,0,0,.2);
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    border-top: 1px solid rgba(0, 0, 0, .1);
   }
+  a {
+    display: block;
+    //position: relative;
+
+    img {
+      position: relative;
+
+
+    }
+  }
+
+  //i {
+  //  position: absolute;
+  //  color: #fff;
+  //  top: 136px;
+  //  left: 0;
+  //  right: 0;
+  //  padding: .5rem;
+  //  margin: 0 auto;
+  //  background: rgba(0,0,0,1);
+  //  width: 25px;
+  //  height: 25px;
+  //}
 }
+
 .list-block {
 
   .unit-50 {
@@ -205,14 +262,17 @@ p, a {
     }
   }
 }
+
 .large-header {
   font-size: 175%;
 }
+
 .small-header {
   display: block;
   font-size: 75%;
   line-height: 1.75;
 }
+
 .p-1 {
   //background: url("../img/transparent-overlay-85.png"),
   //url("../img/parallax/fabc-img-01.jpg");
@@ -220,6 +280,7 @@ p, a {
   background-repeat: repeat, no-repeat;
   //height: 200px;
 }
+
 .p-2 {
   //background: url("../img/transparent-overlay-85.png"),
   //url("../img/parallax/fabc-img-02.jpg");
@@ -227,6 +288,7 @@ p, a {
   background-repeat: repeat, no-repeat;
   //height: 200px;
 }
+
 .p-3 {
   //background: url("../img/transparent-overlay-85.png"),
   //url("../img/parallax/fabc-img-03.jpg");
@@ -234,6 +296,7 @@ p, a {
   background-repeat: repeat, no-repeat;
   //height: 200px;
 }
+
 .p-4 {
   //background: url("../img/transparent-overlay-85.png"),
   //url("../img/parallax/fabc-img-04.jpg");
@@ -241,6 +304,7 @@ p, a {
   background-repeat: repeat, no-repeat;
   //height: 200px;
 }
+
 [class*="p-"] {
 
   .column {
@@ -248,8 +312,9 @@ p, a {
   }
 
 }
+
 [class^="blocks-"] {
-  
+
   p {
     font-size: .75rem;
     line-height: 1.5;
@@ -258,13 +323,16 @@ p, a {
   //  margin: 0 1%;
   //}
 }
+
 .blocks-wrap {
-  border: 1px solid rgba(0,0,0,.1);
+  border: 1px solid rgba(0, 0, 0, .1);
   padding: 3em 1.5em 0;
 }
+
 li {
   list-style: none;
 }
+
 .google-map {
   margin-bottom: 2px;
   position: relative;
@@ -284,10 +352,10 @@ li {
 
 main {
   height: 100vh;
-  
+
   .row {
     padding-top: 3em;
-    
+
     &.top {
       padding-top: 6em;
     }
@@ -297,6 +365,7 @@ main {
   //  padding-bottom: 5em;
   //}
 }
+
 .centered-content {
   h1, h2, h3, h4, p, ul, li {
     text-align: center;
@@ -306,21 +375,24 @@ main {
     margin: 0 auto 2rem;
   }
 }
+
 .content-item .episode .podcast_name,
 .content-item .episode .episode_name,
 .content-item .episode .meta p,
 .content-item .episode .description {
-  color: rgba(255,255,255,.8) !important;
+  color: rgba(255, 255, 255, .8) !important;
   margin-bottom: .5em;
 }
+
 div.episode div.meta {
-  color: rgba(255,255,255,.9) !important;
+  color: rgba(255, 255, 255, .9) !important;
   padding: 0 !important;
-  
+
   p {
-    
+
   }
 }
+
 div.episode {
   background: rgba(0, 0, 0, .5);
   border: 1px solid rgba(255, 255, 255, .1);
@@ -335,11 +407,13 @@ div.episode {
     background: rgba(191, 51, 19, 0.25);
   }
 }
+
 div.episode p.description {
   position: absolute;
   font-weight: 600;
   margin-top: -20px;
 }
+
 //div.player_wrap {
 //  background: rgba(191, 51, 19, 0.80)!important;
 //  -webkit-transition: all .5s ease-in-out;

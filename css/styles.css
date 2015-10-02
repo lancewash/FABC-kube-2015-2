@@ -6624,6 +6624,7 @@ p, a {
 
 .row .profile-link {
   margin-left: 8%;
+  position: relative;
   width: 28%;
 }
 
@@ -6639,9 +6640,30 @@ p, a {
   border-top: 1px dotted transparent;
 }
 
+.row .profile-link p:after {
+  content: "";
+  background: url(../img/plus.png) no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 33%;
+  right: 0;
+  margin: 0 auto;
+}
+
 .row .profile-link:hover p {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.row .profile-link a {
+  display: block;
+}
+
+.row .profile-link a img {
+  position: relative;
 }
 
 .list-block .unit-50 {

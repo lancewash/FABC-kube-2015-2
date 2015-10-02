@@ -6648,14 +6648,40 @@ p, a {
   display: block;
   position: absolute;
   left: 0;
-  bottom: 33%;
+  bottom: 30%;
   right: 0;
   margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 0.75s ease-out;
+  -moz-transition: all 0.75s ease-out;
+  -ms-transition: all 0.75s ease-out;
+  -o-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
 }
 
 .row .profile-link:hover p {
+  background: rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid transparent;
+}
+
+.row .profile-link:hover p:after {
+  content: "";
+  background: url(../img/plus.png) no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 33%;
+  right: 0;
+  margin: 0 auto;
+  opacity: 1;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
 
 .row .profile-link a {

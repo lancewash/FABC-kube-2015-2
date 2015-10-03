@@ -350,7 +350,7 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.333em;
   margin-bottom: .5em;
 }
@@ -6502,6 +6502,16 @@ button:hover, .button:hover {
   left: 0;
   position: absolute;
   width: 50px;
+}
+
+.content-wrap.centered-content h2 {
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+}
+
+.content-wrap.centered-content h2::after {
+  margin: 0 auto;
+  right: 0;
 }
 
 .content-wrap h1 {

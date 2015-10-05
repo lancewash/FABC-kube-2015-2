@@ -49,6 +49,18 @@
       width: 50px;
     }
   }
+  &.centered-content {
+    
+    h2 {
+      margin-bottom: 1.5em;
+      padding-bottom: 1em;
+
+      &::after {
+        margin: 0 auto;
+        right: 0;
+      }
+    }
+  }
 
   h1 {
     line-height: 1.5em;
@@ -149,7 +161,7 @@ p, a {
   background: url("../img/fabc-logo.png") no-repeat;
   display: block;
   height: 258px;
-  left: 2em;
+  //left: 2em;
   margin-top: 15px;
   position: absolute;
   text-indent: -999999em;
@@ -322,11 +334,16 @@ p, a {
 }
 
 .p-3 {
+  background: #344b56;
   //background: url("../img/transparent-overlay-85.png"),
   //url("../img/parallax/fabc-img-03.jpg");
   background: url("../img/parallax/fabc-img-03.jpg");
   background-repeat: repeat, no-repeat;
   //height: 200px;
+
+  //&footer & {
+  //  background: #344b56;
+  //}
 }
 
 .p-4 {
@@ -364,13 +381,20 @@ p, a {
 li {
   list-style: none;
 }
-
+.map {
+  //background: #344b56;
+  margin-bottom: 2em;
+}
 .google-map {
   margin-bottom: 2px;
   position: relative;
-  padding-bottom: 50%; // This is the aspect ratio
-  height: 400px;
+  //padding-bottom: 50%; // This is the aspect ratio
+  height: 500px;
   overflow: hidden;
+  
+  .i4ewOd-pzNkMb-haAclf {
+    background: #344b56 !important;
+  }
 
   iframe {
     border: none !important;

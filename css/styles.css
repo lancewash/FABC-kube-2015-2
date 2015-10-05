@@ -5140,7 +5140,7 @@ Navigation Styles
 }
 
 .subpage .banner {
-  height: 240px;
+  height: 360px;
 }
 
 .subpage-content {
@@ -5160,7 +5160,7 @@ Navigation Styles
 }
 
 .subpage .banner-wrap {
-  height: 240px;
+  height: 360px;
 }
 
 .banner-img {
@@ -6608,7 +6608,6 @@ p, a {
   background: url("../img/fabc-logo.png") no-repeat;
   display: block;
   height: 258px;
-  left: 2em;
   margin-top: 15px;
   position: absolute;
   text-indent: -999999em;
@@ -6735,6 +6734,7 @@ p, a {
 }
 
 .p-3 {
+  background: #344b56;
   background: url("../img/parallax/fabc-img-03.jpg");
   background-repeat: repeat, no-repeat;
 }
@@ -6762,12 +6762,19 @@ li {
   list-style: none;
 }
 
+.map {
+  margin-bottom: 2em;
+}
+
 .google-map {
   margin-bottom: 2px;
   position: relative;
-  padding-bottom: 50%;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
+}
+
+.google-map .i4ewOd-pzNkMb-haAclf {
+  background: #344b56 !important;
 }
 
 .google-map iframe {

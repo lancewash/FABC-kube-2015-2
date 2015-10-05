@@ -5095,23 +5095,63 @@ Navigation Styles
 }
 
 .sticky {
-  background: #efefef;
+  background: #3c0308;
   margin-left: -2em;
   margin-right: -2em;
+  margin-top: -1px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 1.5s ease;
+  -moz-transition: all 1.5s ease;
+  -ms-transition: all 1.5s ease;
+  -o-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+
+.sticky li:last-child, .sticky li:first-child {
+  background: rgba(0, 0, 0, 0.75);
+  width: .25%;
+}
+
+.sticky li:last-child a.active:after, .sticky li:first-child a.active:after {
+  background: none;
+  opacity: 0;
 }
 
 .sticky.stuck {
   position: fixed;
   top: 0;
   width: 100%;
+  opacity: 1;
+  visibility: visible;
 }
 
 .sticky a {
+  color: rgba(255, 255, 255, 0.9);
   padding: 1rem 0;
+  position: relative;
 }
 
 .sticky a:hover {
-  background: rgba(0, 0, 0, 0.065);
+  background: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.sticky a.active {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.sticky a.active:after {
+  background: url("../img/active-pointer.png");
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 18px;
+  height: 6px;
+  content: '';
+  opacity: 1;
 }
 
 .subpage .banner h2 {
@@ -6631,25 +6671,26 @@ p, a {
   width: 300px;
 }
 
-.row .profile-link {
+.profile-link {
   margin-left: 8%;
   position: relative;
   width: 28%;
 }
 
-.row .profile-link.unit-20 {
-  width: 17%;
+.profile-link.unit-20 {
+  width: 20%;
 }
 
-.row .profile-link p {
+.profile-link p {
   text-align: center;
   margin-top: 1rem;
-  padding: .5rem 0;
+  margin-bottom: 0;
+  padding: 0;
   border-bottom: 1px dotted transparent;
   border-top: 1px dotted transparent;
 }
 
-.row .profile-link p:after {
+.profile-link p:after {
   content: "";
   background: url(../img/plus.png) no-repeat;
   width: 30px;
@@ -6657,7 +6698,7 @@ p, a {
   display: block;
   position: absolute;
   left: 0;
-  bottom: 30%;
+  bottom: 10%;
   right: 0;
   margin: 0 auto;
   opacity: 0;
@@ -6668,13 +6709,12 @@ p, a {
   transition: all 0.75s ease-out;
 }
 
-.row .profile-link:hover p {
-  background: rgba(0, 0, 0, 0.05);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+.profile-link:hover p {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-top: 1px solid transparent;
 }
 
-.row .profile-link:hover p:after {
+.profile-link:hover p:after {
   content: "";
   background: url(../img/plus.png) no-repeat;
   width: 30px;
@@ -6682,7 +6722,7 @@ p, a {
   display: block;
   position: absolute;
   left: 0;
-  bottom: 33%;
+  bottom: 20%;
   right: 0;
   margin: 0 auto;
   opacity: 1;
@@ -6693,11 +6733,11 @@ p, a {
   transition: all 0.25s ease-out;
 }
 
-.row .profile-link a {
+.profile-link a {
   display: block;
 }
 
-.row .profile-link a img {
+.profile-link a img {
   position: relative;
 }
 

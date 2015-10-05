@@ -185,13 +185,28 @@ p, a {
   width: 300px;
 }
 
-.row .profile-link {
+.profile-link {
   margin-left: 8%;
   position: relative;
   width: 28%;
 
   &.unit-20 {
-    width: 17%;
+    width: 20%;
+
+    &:hover p {
+      //background: rgba(0, 0, 0, .05);
+
+      //&:after {
+      //  bottom: 22%;
+      //
+      //}
+    
+
+
+        //&:hover {
+        //  background: url(../img/plus-hover.png) no-repeat;
+        //}
+      }
   }
   //&:after {
   //  content: "";
@@ -208,7 +223,8 @@ p, a {
   p {
     text-align: center;
     margin-top: 1rem;
-    padding: .5rem 0;
+    margin-bottom: 0;
+    padding: 0;
     border-bottom: 1px dotted rgba(0, 0, 0, 0);
     border-top: 1px dotted rgba(0, 0, 0, 0);
 
@@ -221,7 +237,7 @@ p, a {
       display: block;
       position: absolute;
       left: 0;
-      bottom: 30%;
+      bottom: 10%;
       right: 0;
       margin: 0 auto;
       opacity: 0;
@@ -237,7 +253,11 @@ p, a {
   }
 
   &:hover p {
-    background: rgba(0, 0, 0, .05);&:after {
+    //background: rgba(0, 0, 0, .05);
+    //text-decoration: underline;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+
+    &:after {
     content: "";
     background: url(../img/plus.png) no-repeat;
     width: 30px;
@@ -245,7 +265,7 @@ p, a {
     display: block;
     position: absolute;
     left: 0;
-    bottom: 33%;
+    bottom: 20%;
     right: 0;
     margin: 0 auto;
     opacity: 1;
@@ -255,15 +275,18 @@ p, a {
     -o-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out;
 
+
     //&:hover {
     //  background: url(../img/plus-hover.png) no-repeat;
     //}
   }
-    border-bottom: 1px solid rgba(0, 0, 0, .15);
+
+    //border-bottom: 1px solid rgba(0, 0, 0, .15);
     border-top: 1px solid rgba(0, 0, 0, 0);
   }
   a {
     display: block;
+    //height: 220px;
     //position: relative;
 
     img {

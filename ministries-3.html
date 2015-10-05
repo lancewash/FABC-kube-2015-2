@@ -45,9 +45,9 @@
                 <div class="[ unit-65 ] right">
                     <nav class="navbar fullwidth" role="navigation">
                         <ul>
-                            <li><a class="active" href="">Leadership</a></li>
-                            <li><a href="">Ministries</a></li>
-                            <li><a href="">History</a></li>
+                            <li><a href="leadership.html">Leadership</a></li>
+                            <li><a class="active" href="">Ministries</a></li>
+                            <li><a href="history.html">History</a></li>
                             <li><a href="">News & Events</a></li>
                         </ul>
                     </nav>
@@ -76,7 +76,7 @@
         <div class="container">
             <nav class="navbar fullwidth list-block-nav sticky">
                 <ul>
-                    <!--<li><a href="#top" class="scroll"><i class="arrow up icon"></i></a></li>-->
+                    <li><a href="#top" class="scroll"><i class="arrow up icon"></i></a></li>
                     <li><a href="#officiary" class="scroll">Officiary</a></li>
                     <li><a href="#office-staff" class="scroll">Office Staff</a></li>
                     <li><a href="#service" class="scroll">Service</a></li>
@@ -86,7 +86,7 @@
                     <li><a href="#officiary" class="scroll">Music</a></li>
                     <li><a href="#office-staff" class="scroll">Houses</a></li>
                     <li><a href="#service" class="scroll">B.W. Watkins</a></li>
-                    <!--<li><a href="#top" class="scroll"><i class="arrow up icon"></i></a></li>-->
+                    <li><a href="#top" class="scroll"><i class="arrow up icon"></i></a></li>
                 </ul>
                 <!--</nav><a href="#top" class="scroll" style="position: absolute;right: 0;top:0;background: #000;color: #fff;padding: 1em;"><i class="arrow up icon"></i></a>-->
                 <!--<i class="arrow down icon centered"></i>-->
@@ -455,7 +455,13 @@
             $(".scroll.right").fadeOut();
         }
     });
-
+//Sticky Active state
+    $(function(){
+        $('.sticky a').click(function () {
+            $('.sticky a').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
 </script>
 </body>
 </html>

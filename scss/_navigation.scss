@@ -493,22 +493,68 @@ Navigation Styles
     }
 }
 .sticky {
-    background: #efefef;
+    background: $colorBurgundy;
+    //box-shadow: 0 5px 10px rgba(0,0,0,.2);
     //height: 60px;
     margin-left: -2em;
     margin-right: -2em;
+    margin-top: -1px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 1.5s ease;
+    -moz-transition: all 1.5s ease;
+    -ms-transition: all 1.5s ease;
+    -o-transition: all 1.5s ease;
+    transition: all 1.5s ease;
+
+    li:last-child, li:first-child {
+         background: rgba(0,0,0,.75);
+         width: .25%;
+
+         a.active {
+             &:after {
+                 background: none;
+                 opacity: 0;
+             }
+         }
+     }
+
     
     &.stuck {
         position: fixed;
         top: 0;
         width: 100%;
+        opacity: 1;
+        visibility: visible;
     }
 
     a {
+        color: rgba(255, 255, 255, .9);
+        //margin-bottom: 1px;
         padding: 1rem 0;
+        position: relative;
 
         &:hover {
-            background: rgba(0,0,0,.065);
+            background: rgba(0,0,0,.1);
+            color: rgba(255, 255, 255, .75) !important;
+        }
+
+        &.active {
+            background: rgba(0,0,0,.25);
+            //border-bottom: 2px solid #D97B29;
+            
+            &:after {
+                background: url("../img/active-pointer.png");
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 18px;
+                height: 6px;
+                content: '';
+                opacity: 1;
+            }
         }
     }
 }

@@ -6527,14 +6527,14 @@ button:hover, .button:hover {
 }
 
 .content-wrap h2 {
-  margin-bottom: 1.5em;
-  padding-bottom: .75em;
+  margin-bottom: 1.25em;
+  padding-bottom: 1em;
   position: relative;
   text-align: left;
 }
 
 .content-wrap h2::after {
-  border-bottom: 3px solid #D97B29;
+  border-bottom: 2px solid #D97B29;
   bottom: 0;
   content: "";
   display: block;
@@ -6564,7 +6564,7 @@ button:hover, .button:hover {
 }
 
 .content-wrap h1::after {
-  border-bottom: 3px solid #D97B29;
+  border-bottom: 2px solid #D97B29;
   bottom: 0;
   content: "";
   display: block;
@@ -6702,15 +6702,14 @@ p, a {
   right: 0;
   margin: 0 auto;
   opacity: 0;
-  -webkit-transition: all 0.75s ease-out;
-  -moz-transition: all 0.75s ease-out;
-  -ms-transition: all 0.75s ease-out;
-  -o-transition: all 0.75s ease-out;
-  transition: all 0.75s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  -moz-transition: all 0.25s ease-out;
+  -ms-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
 
 .profile-link:hover p {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-top: 1px solid transparent;
 }
 
@@ -6831,11 +6830,20 @@ main {
 }
 
 main .row {
-  padding-top: 3em;
+  padding-top: 3rem;
+}
+
+.subpage main .row {
+  padding-top: 0;
 }
 
 main .row.top {
-  padding-top: 6em;
+  padding-top: 6rem;
+}
+
+footer.container {
+  padding-top: 6rem;
+  padding-bottom: 3rem;
 }
 
 .centered-content h1, .centered-content h2, .centered-content h3, .centered-content h4, .centered-content p, .centered-content ul, .centered-content li {

@@ -32,13 +32,13 @@
 
   }
   h2 {
-    margin-bottom: 1.5em;
-    padding-bottom: .75em;
+    margin-bottom: 1.25em;
+    padding-bottom: 1em;
     position: relative;
     text-align: left;
 
     &::after {
-      border-bottom: 3px solid #D97B29;
+      border-bottom: 2px solid #D97B29;
       bottom: 0;
       content: "";
       display: block;
@@ -71,7 +71,7 @@
     text-transform: uppercase;
 
     &::after {
-      border-bottom: 3px solid #D97B29;
+      border-bottom: 2px solid #D97B29;
       bottom: 0;
       content: "";
       display: block;
@@ -241,11 +241,11 @@ p, a {
       right: 0;
       margin: 0 auto;
       opacity: 0;
-      -webkit-transition: all 0.75s ease-out;
-      -moz-transition: all 0.75s ease-out;
-      -ms-transition: all 0.75s ease-out;
-      -o-transition: all 0.75s ease-out;
-      transition: all 0.75s ease-out;
+      -webkit-transition: all 0.25s ease-out;
+      -moz-transition: all 0.25s ease-out;
+      -ms-transition: all 0.25s ease-out;
+      -o-transition: all 0.25s ease-out;
+      transition: all 0.25s ease-out;
       //&:hover {
       //  background: url(../img/plus-hover.png) no-repeat;
       //}
@@ -255,7 +255,7 @@ p, a {
   &:hover p {
     //background: rgba(0, 0, 0, .05);
     //text-decoration: underline;
-    border-bottom: 1px solid rgba(0,0,0,.2);
+    //border-bottom: 1px solid rgba(0,0,0,.2);
 
     &:after {
     content: "";
@@ -433,10 +433,14 @@ main {
   height: 100vh;
 
   .row {
-    padding-top: 3em;
+    padding-top: 3rem;
+    
+    .subpage & {
+      padding-top: 0;
+    }
 
     &.top {
-      padding-top: 6em;
+      padding-top: 6rem;
     }
   }
 
@@ -444,7 +448,14 @@ main {
   //  padding-bottom: 5em;
   //}
 }
+footer {
 
+  &.container {
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+}
 .centered-content {
   h1, h2, h3, h4, p, ul, li {
     text-align: center;

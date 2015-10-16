@@ -4571,6 +4571,10 @@ select.unit-100 {
   clear: both;
 }
 
+.navbar.sticky {
+  margin-bottom: 0;
+}
+
 .navbar-left {
   float: left;
 }
@@ -6502,6 +6506,7 @@ button:hover, .button:hover {
 .content-wrap {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 3rem;
 }
 
 .content-wrap:not([class^="p-"]) {
@@ -6616,8 +6621,72 @@ button:hover, .button:hover {
   color: white;
 }
 
-.inverted-wrap a {
+.inverted-wrap li a {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.inverted-wrap li a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.inverted-wrap .inverted-wrap-item li a {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+div.episode div.meta {
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 0 !important;
+}
+
+div.episode,
+.inverted-wrap-item {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 3em;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+div.episode:hover,
+.inverted-wrap-item:hover {
+  background: white;
+}
+
+div.episode:hover h3.episode_name,
+.inverted-wrap-item:hover h3.episode_name {
+  color: white;
+}
+
+div.episode ul,
+.inverted-wrap-item ul {
   color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+div.episode li a,
+.inverted-wrap-item li a {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: .85rem;
+}
+
+div.episode li a:hover,
+.inverted-wrap-item li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+div.episode p.description {
+  position: absolute;
+  font-weight: 600;
+  margin-top: -20px;
+}
+
+div.episode h3.episode_name {
+  font-size: 18px !important;
 }
 
 p, a {
@@ -6734,6 +6803,7 @@ p, a {
 
 .profile-link a {
   display: block;
+  margin-bottom: 4rem;
 }
 
 .profile-link a img {
@@ -6829,21 +6899,16 @@ main {
   height: 100vh;
 }
 
-main .row {
-  padding-top: 3rem;
-}
-
 .subpage main .row {
   padding-top: 0;
 }
 
 main .row.top {
-  padding-top: 6rem;
+  padding-top: 3rem;
 }
 
 footer.container {
-  padding-top: 6rem;
-  padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 .centered-content h1, .centered-content h2, .centered-content h3, .centered-content h4, .centered-content p, .centered-content ul, .centered-content li {
@@ -6861,30 +6926,4 @@ footer.container {
 .content-item .episode .description {
   color: rgba(255, 255, 255, 0.8) !important;
   margin-bottom: .5em;
-}
-
-div.episode div.meta {
-  color: rgba(255, 255, 255, 0.9) !important;
-  padding: 0 !important;
-}
-
-div.episode {
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 3em;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-div.episode:hover {
-  background: rgba(191, 51, 19, 0.25);
-}
-
-div.episode p.description {
-  position: absolute;
-  font-weight: 600;
-  margin-top: -20px;
 }

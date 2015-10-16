@@ -3,6 +3,7 @@
 
   display: flex;
   flex-wrap: wrap;
+  padding-top: 3rem;
 
   &:not([class^="p-"]) {
     min-height: 300px;
@@ -123,11 +124,75 @@
   strong {
     color: rgba(255, 255, 255, 1);
   }
-  a {
-    color: rgba(255, 255, 255, .75);
+  li a {
+    border-bottom: 1px dotted rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .85);
+    font-size: 1.1rem;
+    line-height: 1.75;
+
+    &:hover {
+      border-bottom: 1px solid rgba(255,255,255,.75);
+    }
+  }
+  .inverted-wrap-item li a {
+    color: rgba(0,0,0,.85);
+  }
+}
+div.episode div.meta {
+  color: rgba(255, 255, 255, .9) !important;
+  padding: 0 !important;
+
+  p {
+
   }
 }
 
+div.episode,
+.inverted-wrap-item{
+  background: rgba(255,255,255,.85);
+  //border: 2px solid rgba(255, 255, 255, .1);
+  padding: 3em;
+  -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -ms-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+
+  &:hover {
+    background: rgba(255,255,255,1);
+    //border: 2px solid rgba(255, 255, 255, .25);
+    //box-shadow: 0 0 14px rgba(0,0,0,.75);
+
+    h3.episode_name {
+      color: rgba(255,255,255,1);
+    }
+  }
+
+  ul {
+    color: rgba(255, 255, 255, .75);
+    margin: 0;
+  }
+  li a {
+    //display: block;
+    color: rgba(255,255,255,.8);
+    font-size: .85rem;
+    //padding: .5rem;
+    //text-decoration: underline;
+
+    &:hover {
+      background: rgba(255, 255, 255, .05);
+    }
+  }
+}
+
+div.episode p.description {
+  position: absolute;
+  font-weight: 600;
+  margin-top: -20px;
+}
+div.episode h3.episode_name {
+  font-size: 18px !important;
+}
 p, a {
   text-decoration: none;
   -webkit-transition: all 0.25s ease-in;
@@ -286,6 +351,7 @@ p, a {
   }
   a {
     display: block;
+    margin-bottom: 4rem;
     //height: 220px;
     //position: relative;
 
@@ -354,6 +420,20 @@ p, a {
   background: url("../img/parallax/fabc-img-02.jpg");
   background-repeat: repeat, no-repeat;
   //height: 200px;
+  //-webkit-transition: all 0.5s ease-out;
+  //-moz-transition: all 0.5s ease-out;
+  //-ms-transition: all 0.5s ease-out;
+  //-o-transition: all 0.5s ease-out;
+  //transition: all 0.5s ease-out;
+  
+  &:hover {
+    //background: #000;
+    //-webkit-transition: all 0.5s ease-out;
+    //-moz-transition: all 0.5s ease-out;
+    //-ms-transition: all 0.5s ease-out;
+    //-o-transition: all 0.5s ease-out;
+    //transition: all 0.5s ease-out;
+  }
 }
 
 .p-3 {
@@ -433,14 +513,14 @@ main {
   height: 100vh;
 
   .row {
-    padding-top: 3rem;
-    
+    //padding-top: 3rem;
+
     .subpage & {
       padding-top: 0;
     }
 
     &.top {
-      padding-top: 6rem;
+      padding-top: 3rem;
     }
   }
 
@@ -451,10 +531,9 @@ main {
 footer {
 
   &.container {
-    padding-top: 6rem;
-    padding-bottom: 3rem;
+    padding-top: 3rem;
+    //padding-bottom: 3rem;
   }
-
 }
 .centered-content {
   h1, h2, h3, h4, p, ul, li {
@@ -474,36 +553,13 @@ footer {
   margin-bottom: .5em;
 }
 
-div.episode div.meta {
-  color: rgba(255, 255, 255, .9) !important;
-  padding: 0 !important;
 
-  p {
-
-  }
-}
-
-div.episode {
-  background: rgba(0, 0, 0, .5);
-  border: 1px solid rgba(255, 255, 255, .1);
-  padding: 3em;
-  -webkit-transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -ms-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-
-  &:hover {
-    background: rgba(191, 51, 19, 0.25);
-  }
-}
-
-div.episode p.description {
-  position: absolute;
-  font-weight: 600;
-  margin-top: -20px;
-}
-
+//.episode {
+//
+//  &:hover div.player_wrap {
+//    background: #000;
+//  }
+//}
 //div.player_wrap {
 //  background: rgba(191, 51, 19, 0.80)!important;
 //  -webkit-transition: all .5s ease-in-out;

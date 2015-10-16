@@ -5,6 +5,10 @@
 .navbar {
     @include rem('margin-bottom', $baseLineInEms);
     @include clearfix;
+    
+    &.sticky {
+        margin-bottom: 0;
+    }
 }
 .navbar-left {
     float: left;

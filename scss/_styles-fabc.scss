@@ -129,6 +129,7 @@
     color: rgba(255, 255, 255, .85);
     font-size: 1.1rem;
     line-height: 1.75;
+    
 
     &:hover {
       border-bottom: 1px solid rgba(255,255,255,.75);
@@ -137,6 +138,7 @@
   .inverted-wrap-item li a {
     color: rgba(0,0,0,.85);
   }
+
 }
 div.episode div.meta {
   color: rgba(255, 255, 255, .9) !important;
@@ -149,9 +151,9 @@ div.episode div.meta {
 
 div.episode,
 .inverted-wrap-item{
-  background: rgba(255,255,255,.85);
+  background: rgba(255,255,255,1);
   //border: 2px solid rgba(255, 255, 255, .1);
-  padding: 3em;
+  padding: 3em 3em 4em;
   -webkit-transition: all .25s ease-in-out;
   -moz-transition: all .25s ease-in-out;
   -ms-transition: all .25s ease-in-out;
@@ -159,7 +161,7 @@ div.episode,
   transition: all .25s ease-in-out;
 
   &:hover {
-    background: rgba(255,255,255,1);
+    //background: rgba(255,255,255,1);
     //border: 2px solid rgba(255, 255, 255, .25);
     //box-shadow: 0 0 14px rgba(0,0,0,.75);
 
@@ -169,12 +171,12 @@ div.episode,
   }
 
   ul {
-    color: rgba(255, 255, 255, .75);
+    color: rgba(0,0,0, .75);
     margin: 0;
   }
   li a {
     //display: block;
-    color: rgba(255,255,255,.8);
+    color: rgba(0,0,0, .75);
     font-size: .85rem;
     //padding: .5rem;
     //text-decoration: underline;
@@ -549,19 +551,56 @@ footer {
 .content-item .episode .episode_name,
 .content-item .episode .meta p,
 .content-item .episode .description {
-  color: rgba(255, 255, 255, .8) !important;
-  margin-bottom: .5em;
+  color: rgba(0,0,0, .75) !important;
+  margin-bottom: 0;
+  text-align: center;
+  width: 100%;
 }
-
-
-//.episode {
-//
-//  &:hover div.player_wrap {
-//    background: #000;
-//  }
+//.content-item .episode .episode_name {
+//  width: 100%;
 //}
-//div.player_wrap {
-//  background: rgba(191, 51, 19, 0.80)!important;
+body div.episode div.buzz_share {
+  float: none !important;
+}
+body div.episode div.meta p {
+  padding: 0 !important;
+}
+body .content-item .episode .description {
+  margin-top: .25em;
+  width: 88%;
+}
+body div.episode {
+  margin-bottom: 0 !important;
+}
+.episode {
+
+  &:hover div.player_wrap {
+    background: #000;
+  }
+}
+body div.player_wrap {
+  background-color: #000 !important;
+}
+body div.episode div.buzz_share div.buzz_share_item a {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+body div.episode div.buzz_share div.buzz_share_item a.buzz_download {
+  background-position: 4px 6px !important;
+}
+body div.episode div.buzz_share div.buzz_share_item a {
+  border: none !important;
+
+  &:hover {
+    border: none !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+//.pay_plan  {
+//  background: rgba(191, 51, 19, 1) !important;
+//  background: #000;
 //  -webkit-transition: all .5s ease-in-out;
 //  -moz-transition: all .5s ease-in-out;
 //  -ms-transition: all .5s ease-in-out;
@@ -571,4 +610,3 @@ footer {
 //  &:hover {
 //    background: #333;
 //  }
-//}

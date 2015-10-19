@@ -4571,6 +4571,10 @@ select.unit-100 {
   clear: both;
 }
 
+.navbar.sticky {
+  margin-bottom: 0;
+}
+
 .navbar-left {
   float: left;
 }
@@ -4694,6 +4698,7 @@ select.unit-100 {
 .nav-stacked ul li a,
 .nav-stacked ul li span {
   border-bottom: 1px solid rgba(255, 255, 255, 0);
+  font-size: .85rem;
   padding: 6px 0;
 }
 
@@ -6502,6 +6507,7 @@ button:hover, .button:hover {
 .content-wrap {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 3rem;
 }
 
 .content-wrap:not([class^="p-"]) {
@@ -6616,8 +6622,67 @@ button:hover, .button:hover {
   color: white;
 }
 
-.inverted-wrap a {
-  color: rgba(255, 255, 255, 0.75);
+.inverted-wrap li a {
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.inverted-wrap li a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.inverted-wrap .inverted-wrap-item li a {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+div.episode div.meta {
+  color: rgba(255, 255, 255, 0.9) !important;
+  padding: 0 !important;
+}
+
+div.episode,
+.inverted-wrap-item {
+  background: white;
+  padding: 3em 3em 4em;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+div.episode:hover h3.episode_name,
+.inverted-wrap-item:hover h3.episode_name {
+  color: white;
+}
+
+div.episode ul,
+.inverted-wrap-item ul {
+  color: rgba(0, 0, 0, 0.75);
+  margin: 0;
+}
+
+div.episode li a,
+.inverted-wrap-item li a {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: .85rem;
+}
+
+div.episode li a:hover,
+.inverted-wrap-item li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+div.episode p.description {
+  position: absolute;
+  font-weight: 600;
+  margin-top: -20px;
+}
+
+div.episode h3.episode_name {
+  font-size: 18px !important;
 }
 
 p, a {
@@ -6734,6 +6799,7 @@ p, a {
 
 .profile-link a {
   display: block;
+  margin-bottom: 4rem;
 }
 
 .profile-link a img {
@@ -6829,21 +6895,16 @@ main {
   height: 100vh;
 }
 
-main .row {
-  padding-top: 3rem;
-}
-
 .subpage main .row {
   padding-top: 0;
 }
 
 main .row.top {
-  padding-top: 6rem;
+  padding-top: 3rem;
 }
 
 footer.container {
-  padding-top: 6rem;
-  padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 .centered-content h1, .centered-content h2, .centered-content h3, .centered-content h4, .centered-content p, .centered-content ul, .centered-content li {
@@ -6859,32 +6920,53 @@ footer.container {
 .content-item .episode .episode_name,
 .content-item .episode .meta p,
 .content-item .episode .description {
-  color: rgba(255, 255, 255, 0.8) !important;
-  margin-bottom: .5em;
+  color: rgba(0, 0, 0, 0.75) !important;
+  margin-bottom: 0;
+  text-align: center;
+  width: 100%;
 }
 
-div.episode div.meta {
-  color: rgba(255, 255, 255, 0.9) !important;
+body div.episode div.buzz_share {
+  float: none !important;
+}
+
+body div.episode div.meta p {
   padding: 0 !important;
 }
 
-div.episode {
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 3em;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+body .content-item .episode .description {
+  margin-top: .25em;
+  width: 88%;
 }
 
-div.episode:hover {
-  background: rgba(191, 51, 19, 0.25);
+body div.episode {
+  margin-bottom: 0 !important;
 }
 
-div.episode p.description {
-  position: absolute;
-  font-weight: 600;
-  margin-top: -20px;
+.episode:hover div.player_wrap {
+  background: #000;
+}
+
+body div.player_wrap {
+  background-color: #000 !important;
+}
+
+body div.episode div.buzz_share div.buzz_share_item a {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+}
+
+body div.episode div.buzz_share div.buzz_share_item a.buzz_download {
+  background-position: 4px 6px !important;
+}
+
+body div.episode div.buzz_share div.buzz_share_item a {
+  border: none !important;
+}
+
+body div.episode div.buzz_share div.buzz_share_item a:hover {
+  border: none !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }

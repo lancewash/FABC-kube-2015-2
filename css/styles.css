@@ -5358,7 +5358,7 @@ Navigation Styles
 }
 
 .service-time-link:hover {
-  background: url("../img/time.png") no-repeat 50% 20% rgba(235, 193, 52, 0.25);
+  background: url("../img/time.png") no-repeat 50% 20% rgba(235, 193, 52, 0.5);
 }
 
 .service-time-link .button-banner {
@@ -5375,7 +5375,7 @@ Navigation Styles
 }
 
 .calendar-link:hover {
-  background: url("../img/calendar.png") no-repeat 50% 20% rgba(0, 93, 131, 0.25);
+  background: url("../img/calendar.png") no-repeat 50% 20% rgba(0, 93, 131, 0.5);
 }
 
 .calendar-link .button-banner {
@@ -5392,7 +5392,7 @@ Navigation Styles
 }
 
 .sunday-chron-link:hover {
-  background: url("../img/sunday-chron.png") no-repeat 50% 20% rgba(120, 147, 48, 0.25);
+  background: url("../img/sunday-chron.png") no-repeat 50% 20% rgba(120, 147, 48, 0.5);
 }
 
 .sunday-chron-link .button-banner {
@@ -5409,7 +5409,7 @@ Navigation Styles
 }
 
 .sermons-link:hover {
-  background: url("../img/sermons.png") no-repeat 50% 20% rgba(191, 51, 19, 0.25);
+  background: url("../img/sermons.png") no-repeat 50% 20% rgba(191, 51, 19, 0.5);
 }
 
 .sermons-link .button-banner {

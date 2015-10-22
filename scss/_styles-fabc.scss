@@ -14,7 +14,11 @@
     }
   }
   &.intro {
-    padding: 3em 0;
+    padding: 5em 0;
+    
+    .row {
+      margin-bottom: 0;
+    }
   }
   .row {
     //margin-bottom: $baseLineHeight * 2em;
@@ -151,7 +155,7 @@ div.episode div.meta {
 
 div.episode,
 .inverted-wrap-item{
-  background: rgba(255,255,255,1);
+  background: rgba(0,0,0,.2);
   //border: 2px solid rgba(255, 255, 255, .1);
   padding: 3em 3em 4em;
   -webkit-transition: all .25s ease-in-out;
@@ -186,7 +190,9 @@ div.episode,
     }
   }
 }
-
+.inverted-wrap-item {
+  background: rgba(255,255,255,.95);
+}
 div.episode p.description {
   position: absolute;
   font-weight: 600;
@@ -304,7 +310,7 @@ p, a {
       display: block;
       position: absolute;
       left: 0;
-      bottom: 10%;
+      bottom: 35%;
       right: 0;
       margin: 0 auto;
       opacity: 0;
@@ -332,7 +338,7 @@ p, a {
     display: block;
     position: absolute;
     left: 0;
-    bottom: 20%;
+    bottom: 40%;
     right: 0;
     margin: 0 auto;
     opacity: 1;
@@ -552,6 +558,7 @@ footer {
 .content-item .episode .meta p,
 .content-item .episode .description {
   color: rgba(0,0,0, .75) !important;
+  color: rgba(255,255,255, .85) !important;
   margin-bottom: 0;
   text-align: center;
   width: 100%;

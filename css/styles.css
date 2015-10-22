@@ -322,6 +322,22 @@ a:hover {
   color: rgba(0, 0, 0, 0.9);
 }
 
+p > a {
+  color: #BF3313;
+  background: linear-gradient(#BF3313, #BF3313) no-repeat;
+  background-size: 0 1px;
+  background-position: 0 1.1em;
+  text-shadow: 0.05em 0 white, -0.05em 0 #fff;
+}
+
+p > a:hover {
+  color: #BF3313;
+  background: linear-gradient(#BF3313, #BF3313) no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 1.1em;
+  text-shadow: 0.05em 0 white, -0.05em 0 #fff;
+}
+
 .title,
 h1,
 h2,
@@ -6515,7 +6531,11 @@ button:hover, .button:hover {
 }
 
 .content-wrap.intro {
-  padding: 3em 0;
+  padding: 5em 0;
+}
+
+.content-wrap.intro .row {
+  margin-bottom: 0;
 }
 
 .content-wrap .row {
@@ -6644,7 +6664,7 @@ div.episode div.meta {
 
 div.episode,
 .inverted-wrap-item {
-  background: white;
+  background: rgba(0, 0, 0, 0.2);
   padding: 3em 3em 4em;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -6673,6 +6693,10 @@ div.episode li a,
 div.episode li a:hover,
 .inverted-wrap-item li a:hover {
   background: rgba(255, 255, 255, 0.05);
+}
+
+.inverted-wrap-item {
+  background: rgba(255, 255, 255, 0.95);
 }
 
 div.episode p.description {
@@ -6763,7 +6787,7 @@ p, a {
   display: block;
   position: absolute;
   left: 0;
-  bottom: 10%;
+  bottom: 35%;
   right: 0;
   margin: 0 auto;
   opacity: 0;
@@ -6786,7 +6810,7 @@ p, a {
   display: block;
   position: absolute;
   left: 0;
-  bottom: 20%;
+  bottom: 40%;
   right: 0;
   margin: 0 auto;
   opacity: 1;
@@ -6921,6 +6945,7 @@ footer.container {
 .content-item .episode .meta p,
 .content-item .episode .description {
   color: rgba(0, 0, 0, 0.75) !important;
+  color: rgba(255, 255, 255, 0.85) !important;
   margin-bottom: 0;
   text-align: center;
   width: 100%;

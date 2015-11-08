@@ -28,6 +28,21 @@ p>a {
         background-position: 0 1.1em;
         text-shadow: .05em 0 white, -.05em 0 #fff;
     }
+
+    footer & {
+        background: none;
+        background-size: auto;
+        background-position: inherit;
+        text-shadow: none;
+
+        &:hover {
+            background: none;
+            background-size: auto;
+            background-position: inherit;
+            border-bottom: 1px solid #BF3313;
+            text-shadow: .05em 0 rgba(0,0,0,0.8), -.05em 0 rgba(0,0,0,0.8);
+        }
+    }
 }
 .title,
 h1,
@@ -77,44 +92,44 @@ h6 {
 
 /* =Subheading
 -----------------------------------------------------------------------------*/
-hgroup h1:first-child,
-hgroup h2:first-child,
-hgroup h3:first-child,
-hgroup h4:first-child,
-hgroup h5:first-child, {
-    margin-bottom: 0;
-}
-h1.subheading,
-h2.subheading,
-h3.subheading,
-h4.subheading,
-h5.subheading {
-    font-weight: 300;
-}
-h1.subheading {
-    font-size: $h1SubheadingFontSize;
-}
-h2.subheading {
-    font-size: $h2SubheadingFontSize;
-}
-h3.subheading {
-    font-size: $h3SubheadingFontSize;
-}
-h4.subheading {
-    font-size: $h4SubheadingFontSize;
-}
-h5.subheading {
-    font-size: $h5SubheadingFontSize;
-}
+//hgroup h1:first-child,
+//hgroup h2:first-child,
+//hgroup h3:first-child,
+//hgroup h4:first-child,
+//hgroup h5:first-child, {
+//    margin-bottom: 0;
+//}
+//h1.subheading,
+//h2.subheading,
+//h3.subheading,
+//h4.subheading,
+//h5.subheading {
+//    font-weight: 300;
+//}
+//h1.subheading {
+//    font-size: $h1SubheadingFontSize;
+//}
+//h2.subheading {
+//    font-size: $h2SubheadingFontSize;
+//}
+//h3.subheading {
+//    font-size: $h3SubheadingFontSize;
+//}
+//h4.subheading {
+//    font-size: $h4SubheadingFontSize;
+//}
+//h5.subheading {
+//    font-size: $h5SubheadingFontSize;
+//}
 
 /* =Lead
 -----------------------------------------------------------------------------*/
-.lead {
-    font-size: $leadFontSize;
-    font-weight: 300;
-    line-height: 1.4em;
-    margin-bottom: .75em;
-}
+//.lead {
+//    font-size: $leadFontSize;
+//    font-weight: 300;
+//    line-height: 1.4em;
+//    margin-bottom: .75em;
+//}
 p,
 ul,
 ol,

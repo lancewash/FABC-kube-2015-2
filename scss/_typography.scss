@@ -12,22 +12,24 @@ a {
     &:focus,
     &:hover {
         color: $colorLinkHover;
+        text-decoration: underline;
     }
 }
 p>a {
 
-    color: #BF3313;
-    background: linear-gradient(#BF3313, #BF3313) no-repeat;
-    background-size: 0 1px;
-    background-position: 0 1.1em;
-    text-shadow: .05em 0 white, -.05em 0 #fff;
-    &:hover {
-        color: #BF3313;
-        background: linear-gradient(#BF3313, #BF3313) no-repeat;
-        background-size: 100% 1px;
-        background-position: 0 1.1em;
-        text-shadow: .05em 0 white, -.05em 0 #fff;
-    }
+    //color: #BF3313;
+    //display: inline-block;
+    //background: linear-gradient(#BF3313, #BF3313) no-repeat;
+    //background-size: 0 1px;
+    //background-position: 0 1.4em;
+    //text-shadow: .05em 0 white, -.05em 0 #fff;
+    //&:hover {
+    //    color: #BF3313;
+    //    background: linear-gradient(#BF3313, #BF3313) no-repeat;
+    //    background-size: 100% 1px;
+    //    background-position: 0 1.4em;
+    //    text-shadow: .05em 0 white, -.05em 0 #fff;
+    //}
 
     footer & {
         background: none;

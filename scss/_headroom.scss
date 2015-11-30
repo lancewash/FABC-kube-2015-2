@@ -52,6 +52,13 @@ header {
 }
 .headroom-not-top.slide-reset .logo {
   background: url("../img/fabc-joy-logo.png") no-repeat;
+  height: 60px;
+  opacity: .75;
+
+  &:hover {
+    margin-top: 15px;
+    opacity: 1;
+  }
 }
 .slide-up {
   top: -200px;

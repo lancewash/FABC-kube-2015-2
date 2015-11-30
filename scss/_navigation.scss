@@ -343,7 +343,7 @@ Navigation Styles
             i {
                 font-size: 1rem;
                 color: #000;
-                opacity: .55;
+                opacity: .75;
             }
         }
 
@@ -357,6 +357,7 @@ Navigation Styles
     }
 
     p, a, i {
+        color: rgba(0,0,0,.9);
         -webkit-transition: all 0.25s;
         -moz-transition: all 0.25s;
         -ms-transition: all 0.25s;
@@ -364,21 +365,35 @@ Navigation Styles
         transition: all 0.25s;
     }
     a i {
-        opacity: .25;
+        color: rgba(0,0,0,.9);
+        font-size: .9rem;
+        opacity: 1;
     }
-
+    //a {
+    //    background: rgba(0,0,0,.025);
+    //}
     a:hover {
-        background: rgba(0, 0, 0, .05);
+        background: rgba(0, 0, 0, .025);
         color: rgba(0,0,0,.75) !important;
 
         i {
             opacity: .5;
         }
     }
-    .sign-in {
+    .nav-icon {
+        border-right: 1px solid rgba(0,0,0,.05);
         display: inline-block;
         float: right;
+        margin-bottom: 1px;
+        min-width: 100px;
         padding: 0.5em 1rem 0.65em;
+
+        &:hover {
+            text-decoration: none;
+        }
+        &:last-child {
+            border-left: 1px solid rgba(0,0,0,.05);
+        }
     }
 }
 
@@ -501,18 +516,28 @@ Navigation Styles
     .navbar {
         //margin-right: 1.5em;
         margin-bottom: 0;
+        //-webkit-transition: all .75s ease-in-out;
+        //-moz-transition: all .75s ease-in-out;
+        //-ms-transition: all .75s ease-in-out;
+        //-o-transition: all .75s ease-in-out;
+        //transition: all .75s ease-in-out;
     }
     [role=navigation]:hover a {
         opacity: .5;
-        -webkit-transition: all 0.75s;
-        -moz-transition: all 0.75s;
-        -ms-transition: all 0.75s;
-        -o-transition: all 0.75s;
-        transition: all 0.75s;
+        -webkit-transition: all .75s ease-in-out;
+        -moz-transition: all .75s ease-in-out;
+        -ms-transition: all .75s ease-in-out;
+        -o-transition: all .75s ease-in-out;
+        transition: all .75s ease-in-out;
 
         &:hover {
             color: rgba(255, 255, 255, 1);
             opacity: 1;
+            -webkit-transition: all .75s ease-in-out;
+            -moz-transition: all .75s ease-in-out;
+            -ms-transition: all .75s ease-in-out;
+            -o-transition: all .75s ease-in-out;
+            transition: all .75s ease-in-out;
         }
     }
 }

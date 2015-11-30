@@ -321,6 +321,10 @@ a:hover {
   text-decoration: underline;
 }
 
+p > a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 footer p > a {
   background: none;
   background-size: auto;
@@ -332,7 +336,7 @@ footer p > a:hover {
   background: none;
   background-size: auto;
   background-position: inherit;
-  border-bottom: 1px solid #BF3313;
+  color: white;
   text-shadow: 0.05em 0 rgba(0, 0, 0, 0.8), -0.05em 0 rgba(0, 0, 0, 0.8);
 }
 
@@ -813,12 +817,28 @@ i.icon.mail.square:before {
   content: "\f199";
 }
 
+i.icon.edit:before {
+  content: "\f044";
+}
+
 i.icon.sign.in:before {
   content: "\f090";
 }
 
 i.icon.call.square:before {
   content: "\f098";
+}
+
+i.icon.add.user:before {
+  content: "\f234";
+}
+
+i.icon.users:before {
+  content: "\f0c0";
+}
+
+i.icon.user:before {
+  content: "\f007";
 }
 
 i.icon.add.circle:before {
@@ -1591,7 +1611,7 @@ Navigation Styles
 .nav-top li:last-child i, .nav-top li:nth-last-of-type(-n+2) i {
   font-size: 1rem;
   color: #000;
-  opacity: .55;
+  opacity: .75;
 }
 
 .nav-top nav, .nav-top p {
@@ -1604,16 +1624,19 @@ Navigation Styles
 }
 
 .nav-top p, .nav-top a, .nav-top i {
+  color: rgba(0, 0, 0, 0.9);
   -webkit-transition: all 0.25s;
   transition: all 0.25s;
 }
 
 .nav-top a i {
-  opacity: .25;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: .9rem;
+  opacity: 1;
 }
 
 .nav-top a:hover {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.025);
   color: rgba(0, 0, 0, 0.75) !important;
 }
 
@@ -1621,10 +1644,21 @@ Navigation Styles
   opacity: .5;
 }
 
-.nav-top .sign-in {
+.nav-top .nav-icon {
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
   display: inline-block;
   float: right;
+  margin-bottom: 1px;
+  min-width: 100px;
   padding: 0.5em 1rem 0.65em;
+}
+
+.nav-top .nav-icon:hover {
+  text-decoration: none;
+}
+
+.nav-top .nav-icon:last-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-main {
@@ -1760,13 +1794,15 @@ Navigation Styles
 
 .nav-main [role=navigation]:hover a {
   opacity: .5;
-  -webkit-transition: all 0.75s;
-  transition: all 0.75s;
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
 
 .nav-main [role=navigation]:hover a:hover {
   color: white;
   opacity: 1;
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
 
 .img-link {
@@ -1913,6 +1949,13 @@ header.header-fixed.slide-reset.headroom-top {
 
 .headroom-not-top.slide-reset .logo {
   background: url("../img/fabc-joy-logo.png") no-repeat;
+  height: 60px;
+  opacity: .75;
+}
+
+.headroom-not-top.slide-reset .logo:hover {
+  margin-top: 15px;
+  opacity: 1;
 }
 
 .slide-up {

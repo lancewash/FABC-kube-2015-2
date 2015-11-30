@@ -235,26 +235,7 @@ p, a {
   text-decoration: none;
 }
 
-.logo {
-  background: url("../img/fabc-logo.png") no-repeat;
-  display: block;
-  height: 258px;
-  //left: 2em;
-  margin-top: 15px;
-  position: absolute;
-  text-indent: -999999em;
-  width: 212px;
-  z-index: 30;
-  -webkit-transition: all 0.25s ease-in;
-  -moz-transition: all 0.25s ease-in;
-  -ms-transition: all 0.25s ease-in;
-  -o-transition: all 0.25s ease-in;
-  transition: all 0.25s ease-in;
 
-  &:hover {
-    margin-top: 18px;
-  }
-}
 
 .divider {
   border-top: 1px solid rgba(0, 0, 0, 0.05);

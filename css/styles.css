@@ -1578,6 +1578,12 @@ Navigation Styles
   opacity: .5;
 }
 
+.nav-top .sign-in {
+  display: inline-block;
+  float: right;
+  padding: 0.5em 1rem 0.65em;
+}
+
 .nav-main {
   background: #3c0308;
   height: 72px;
@@ -2479,7 +2485,11 @@ button:hover, .button:hover {
 }
 
 .inverted-wrap .inverted-wrap-item li a {
-  color: rgba(0, 0, 0, 0.85);
+  color: #BF3313;
+}
+
+.inverted-wrap .inverted-wrap-item li a:hover {
+  color: rgba(0, 0, 0, 0.9);
 }
 
 div.episode div.meta {
@@ -2820,6 +2830,75 @@ body div.episode div.buzz_share div.buzz_share_item a:hover {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
+}
+
+/* HOMEPAGE SECTION */
+.animation-text {
+  position: absolute;
+  z-index: 9999;
+  top: 43%;
+  left: 0;
+  right: 0;
+  margin-top: -1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25vw;
+  font-size: 3.25vw;
+  text-align: center;
+  color: #83837c;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+@media screen and (min-width: 680px) {
+  .animation-text {
+    -webkit-animation: fadeInOutAnimation 6s 1s forwards;
+    -moz-animation: fadeInOutAnimation 6s 1s forwards;
+    -o-animation: fadeInOutAnimation 6s 1s forwards;
+    animation: fadeInOutAnimation 6s 1s forwards;
+  }
+}
+
+/*.introComplete .animation-text {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}*/
+.banner-wrap {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 4s 1s;
+  -o-transition: opacity 4s 1s;
+  transition: opacity 4s 1s;
+}
+
+.banner-wrap {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.pager {
+  margin-top: 0.5rem;
+  font-family: "minion-pro", Georgia, serif;
+}
+
+@media screen and (min-width: 680px) {
+  .slideshow .slide {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  .touch .slideshow .slide {
+    position: relative;
+    display: inline-block;
+    height: 100vh;
+  }
 }
 
 @media (max-width: 1070px) {

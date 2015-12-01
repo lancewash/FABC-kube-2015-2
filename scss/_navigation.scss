@@ -380,18 +380,24 @@ Navigation Styles
             opacity: .5;
         }
     }
+    .nav-icon-wrap {
+        min-width: 280px;
+    }
     .nav-icon {
         border-right: 1px solid rgba(0,0,0,.05);
-        display: inline-block;
-        float: right;
+        float: left;
+        //display: inline-block;
+        //float: right;
         margin-bottom: 1px;
         min-width: 100px;
+        text-align: center;
+        width: 25%;
         padding: 0.5em 1rem 0.65em;
 
         &:hover {
             text-decoration: none;
         }
-        &:last-child {
+        &:first-child {
             border-left: 1px solid rgba(0,0,0,.05);
         }
     }

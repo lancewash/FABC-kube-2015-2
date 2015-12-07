@@ -269,6 +269,7 @@ p, a {
       //border: 1px solid rgba(0,0,0,.1);
     }
   }
+
   //&:after {
   //  content: "";
   //  background: url(../img/plus.png) no-repeat #000;
@@ -420,12 +421,7 @@ p, a {
   //url("../img/parallax/fabc-img-02.jpg");
   background: url("../img/parallax/fabc-img-02.jpg");
   background-repeat: repeat, no-repeat;
-  //height: 200px;
-  //-webkit-transition: all 0.5s ease-out;
-  //-moz-transition: all 0.5s ease-out;
-  //-ms-transition: all 0.5s ease-out;
-  //-o-transition: all 0.5s ease-out;
-  //transition: all 0.5s ease-out;
+
   
   &:hover {
     //background: #000;

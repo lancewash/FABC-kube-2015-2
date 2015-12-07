@@ -9,7 +9,8 @@
 </head>
 <body>
 <div class="page-wrap">
-    <header class="header-fixed">
+    <header class="header-fixed"><a href="index.html" class="logo-mobile">First African Baptist Church</a>
+        <div class="nav-wrap nav-collapse">
         <!-- Top Navigation -->
         <div class="[ container ] nav-top">
             <div class="[ row ] split end">
@@ -21,9 +22,10 @@
                                                                                  alt=""/></a>
                 </div>
                 <div class="unit-40 right nav-icon-wrap">
-                    <a class="nav-icon" href="#">Giving  &nbsp; <i class="icon money"></i></a>
+                <!--<a class="nav-icon" href="#">Giving  &nbsp; <i class="icon money"></i></a>-->
+                <a class="nav-icon" href="#">Calendar  &nbsp; <i class="icon calendar"></i></a>
                 <a class="nav-icon" href="#">Directions  &nbsp; <i class="icon marker"></i></a>
-                <a class="nav-icon" href="#">Log in &nbsp; <i class="icon user"></i></a>
+                <a class="nav-icon" href="#">Sign in &nbsp; <i class="icon sign in"></i></a>
                 <a class="nav-icon" href="#">Sitemap &nbsp; <i class="icon sitemap"></i></a>
                 </div>
                 <!--<div class="[ unit-50 ] right">
@@ -44,7 +46,7 @@
         <div class="[ container ] nav-main">
             <div class="[ row ] end">
                 <div class="[ unit-25 ]">
-                    <a href="index.html" id="logo" class="logo">First African Baptist Church</a>
+                    <a href="index.html" id="logo" class="logo-desktop">First African Baptist Church</a>
                 </div>
 
                 <div class="[ unit-65 ] right">
@@ -52,12 +54,13 @@
                         <ul>
                             <li><a href="leadership.html">Leadership</a></li>
                             <li><a href="ministries-3.html">Ministries</a></li>
-                            <li><a href="history.html">History</a></li>
+                            <li><a href="history.html">Our History</a></li>
                             <li><a href="">News & Events</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
+        </div>
         </div>
     </header>
 
@@ -79,7 +82,7 @@
                 <!--<img src="img/banner-img/banner-img-4.jpg" alt=""/>-->
             </div>
         </div>
-        <div class="content split banner-head-wrap">
+        <div class="split banner-head-wrap"><!--class="content"-->
             <ul class="row banner-head">
                 <li class="unit-25 banner-head-items banner-items">
                     <a href="" class="calendar-link">
@@ -113,7 +116,6 @@
                         </button>-->
                     </a>
                 </li>
-
             </ul>
         </div>
     </div>
@@ -412,7 +414,6 @@
                             <li><a href="">Ministries</a></li>
                             <li><a href="">Our History</a></li>
                             <li><a href="">News & Events</a></li>
-                            <li><a href="">Leadership</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -445,7 +446,10 @@
 <script src="js/jquery-ui.js"></script>
 <script src="js/slick.min.js"></script>
 <script src="js/headroom.js"></script>
-
+<script src="js/responsive-nav.js"></script>
+<script>
+    var navigation = responsiveNav(".nav-collapse");
+</script>
 <script>
     $(document).ready(function () {
         $(".banner").slick({

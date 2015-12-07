@@ -41,16 +41,16 @@ header {
   }
 }
 
-.slide-up .logo, .slide-reset .logo {
+.slide-up .logo-desktop, .slide-reset .logo-desktop {
   background: url("../img/fabc-joy-logo.png") no-repeat;
   transform: translateY(0);
 
 }
-.slide-reset .logo {
+.slide-reset .logo-desktop {
   background: url("../img/fabc-logo.png") no-repeat;
 
 }
-.headroom-not-top.slide-reset .logo {
+.headroom-not-top.slide-reset .logo-desktop {
   background: url("../img/fabc-joy-logo.png") no-repeat;
   height: 60px;
   opacity: .75;

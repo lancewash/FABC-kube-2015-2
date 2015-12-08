@@ -436,41 +436,47 @@ Navigation Styles
             text-transform: uppercase;
             -webkit-transition: color 0.2s;
             transition: color 0.2s;
+            -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            -ms-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
 
             &:hover {
                 background: rgba(0, 0, 0, .35);
             }
 
-            &:after {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background: #D97B29;
-                content: '';
-                opacity: 0;
-                -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-                -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
-                transition: height 0.3s, opacity 0.3s, transform 0.3s;
-                -webkit-transform: translateY(-10px);
-                -moz-transform: translateY(-10px);
-                transform: translateY(-10px);
-            }
+            //&:after {
+            //    position: absolute;
+            //    bottom: 0;
+            //    left: 0;
+            //    width: 100%;
+            //    height: 2px;
+            //    background: #D97B29;
+            //    content: '';
+            //    opacity: 0;
+            //    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+            //    -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+            //    transition: height 0.3s, opacity 0.3s, transform 0.3s;
+            //    -webkit-transform: translateY(-10px);
+            //    -moz-transform: translateY(-10px);
+            //    transform: translateY(-10px);
+            //}
             &.active {
-                background: rgba(0, 0, 0, .35);
+                //color: orange;
+                background: rgba(0, 0, 0, .4);
             }
-            &.active::after {
-                height: 2px;
-                opacity: 1;
-                -webkit-transform: translateY(0px);
-                -moz-transform: translateY(0px);
-                transform: translateY(0px);
-            }
-            &.active:hover {
-                background: rgba(0, 0, 0, .35);
-                cursor: default;
-            }
+            //&.active::after {
+            //    height: 2px;
+            //    opacity: 1;
+            //    -webkit-transform: translateY(0px);
+            //    -moz-transform: translateY(0px);
+            //    transform: translateY(0px);
+            //}
+            //&.active:hover {
+            //    background: rgba(0, 0, 0, .35);
+            //    cursor: default;
+            //}
             &:hover::after {
                 height: 2px;
                 opacity: 1;
@@ -534,20 +540,20 @@ Navigation Styles
     }
     [role=navigation]:hover a {
         opacity: .5;
-        -webkit-transition: all .75s ease-in-out;
-        -moz-transition: all .75s ease-in-out;
-        -ms-transition: all .75s ease-in-out;
-        -o-transition: all .75s ease-in-out;
-        transition: all .75s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -ms-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
 
         &:hover {
             color: rgba(255, 255, 255, 1);
             opacity: 1;
-            -webkit-transition: all .75s ease-in-out;
-            -moz-transition: all .75s ease-in-out;
-            -ms-transition: all .75s ease-in-out;
-            -o-transition: all .75s ease-in-out;
-            transition: all .75s ease-in-out;
+            -webkit-transition: all .5s ease-in-out;
+            -moz-transition: all .5s ease-in-out;
+            -ms-transition: all .5s ease-in-out;
+            -o-transition: all .5s ease-in-out;
+            transition: all .5s ease-in-out;
         }
     }
 }
@@ -555,11 +561,11 @@ Navigation Styles
 .img-link {
     opacity: .75;
     padding-top: .5em;
-    -webkit-transition: all 0.25s;
-    -moz-transition: all 0.25s;
-    -ms-transition: all 0.25s;
-    -o-transition: all 0.25s;
-    transition: all 0.25s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
 
     &:hover {
         opacity: 1;

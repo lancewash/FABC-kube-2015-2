@@ -8,7 +8,7 @@
     <script src="js/modernizr.js"></script>
 </head>
 <body>
-<div class="page-wrap">
+<div class="page-wrap animsition">
     <header class="header-fixed"><a href="index.html" class="logo-mobile">First African Baptist Church</a>
         <div class="nav-wrap nav-collapse">
         <!-- Top Navigation -->
@@ -23,7 +23,7 @@
                 </div>
                 <div class="unit-40 right nav-icon-wrap">
                 <!--<a class="nav-icon" href="#">Giving  &nbsp; <i class="icon money"></i></a>-->
-                <a class="nav-icon" href="#">Calendar  &nbsp; <i class="icon calendar"></i></a>
+                <a class="nav-icon" href="#nav-modal-1">Calendar  &nbsp; <i class="icon calendar"></i></a>
                 <a class="nav-icon" href="#">Directions  &nbsp; <i class="icon marker"></i></a>
                 <a class="nav-icon" href="#">Sign in &nbsp; <i class="icon sign in"></i></a>
                 <a class="nav-icon" href="#">Sitemap &nbsp; <i class="icon sitemap"></i></a>
@@ -52,10 +52,10 @@
                 <div class="[ unit-65 ] right">
                     <nav class="navbar fullwidth" role="navigation">
                         <ul>
-                            <li><a href="leadership.html">Leadership</a></li>
-                            <li><a href="ministries-3.html">Ministries</a></li>
-                            <li><a href="history.html">Our History</a></li>
-                            <li><a href="">News & Events</a></li>
+                            <li><a class="animsition-link" href="leadership.html">Leadership</a></li>
+                            <li><a class="animsition-link" href="ministries-3.html">Ministries</a></li>
+                            <li><a class="animsition-link" href="history.html">History</a></li>
+                            <li><a class="animsition-link" href="">News & Events</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -68,8 +68,8 @@
         <div class="banner">
             <div class="banner-img banner-1" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0"
                  data-stellar-offset-parent="true">
-                <!--<div><h2>"a family-oriented church for all of the Lord's children regardless of race, color, creed, or circumstance."</h2></div>-->
-                <!--<img src="img/banner-img/banner-img-4.jpg" alt=""/>-->
+                <div><h2>"a family-oriented church for all of the Lord's children regardless of race, color, creed, or circumstance."</h2></div>
+                <img src="img/banner-img/banner-img-4.jpg" alt=""/>
             </div>
             <div class="banner-img banner-2" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0"
                  data-stellar-offset-parent="true">
@@ -93,7 +93,7 @@
                     </a>
                 </li>
                 <li class="unit-25 banner-head-items banner-items">
-                    <a href="" class="service-time-link">
+                    <a href="#nav-modal-4" class="service-time-link">
                         <!--<i class="wait icon"></i>-->
                         <span>Service Times</span>
                         <!--<button class="button-banner button-is-hidden">Quick View <i class="add circle icon"></i>
@@ -102,7 +102,7 @@
                     <!--<p>Quik View</p>-->
                 </li>
                 <li class="unit-25 banner-head-items banner-items">
-                    <a href="" class="sermons-link">
+                    <a href="#nav-modal-3" class="sermons-link">
                         <!--<i class="unmute icon"></i>-->
                         <span>Sermons</span>
                         <!--<button class="button-banner button-is-hidden">Quick View <i class="add circle icon"></i>
@@ -110,7 +110,7 @@
                     </a>
                 </li>
                 <li class="unit-25 banner-head-items banner-items">
-                    <a href="" class="sunday-chron-link">
+                    <a href="#nav-modal-2" class="sunday-chron-link">
                         <span>Sunday Chronicles</span>
                         <!--<button class="button-banner button-is-hidden">Quick View <i class="add circle icon"></i>
                         </button>-->
@@ -442,6 +442,68 @@
         </footer>
     </main>
 </div>
+<!-- Modal Content -->
+<!-- Begin modal 1 -->
+<div class="remodal remodal-doc" data-remodal-id="nav-modal-1" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+    <div class="unit-100 centered modal-doc">
+        <object data="docs/Calendar.pdf" type="application/pdf" width="100%" height="100%">
+            <p>Alternative text - include a link <a href="docs/Calendar.pdf">to the PDF!</a></p>
+        </object>
+    </div>
+</div>
+<!-- End modal -->
+<!-- Begin modal 2 -->
+<div class="remodal remodal-doc" data-remodal-id="nav-modal-2" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+    <div class="unit-100 centered modal-doc">
+        <object data="docs/1st-sunday-feb-2014.pdf" type="application/pdf" width="100%" height="100%">
+            <p>Alternative text - include a link <a href="docs/1st-sunday-feb-2014.pdf">to the PDF!</a></p>
+        </object>
+    </div>
+</div>
+<!-- End modal -->
+<!-- Begin modal 3 -->
+<div class="remodal" data-remodal-id="nav-modal-3" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+    <div class="unit-100 centered modal-doc">
+        <script src="http://www.buzzsprout.com/8786.js?player=large&beta=" type="text/javascript"
+                charset="utf-8"></script>
+    </div>
+</div>
+<!-- End modal -->
+<!-- Begin modal 4 -->
+<div class="remodal" data-remodal-id="nav-modal-4" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+    <div class="unit-100 centered modal-doc">
+        <div class="panel">
+            <h3>Sunday Worship Times</h3>
+
+            <p><strong>8:45 am</strong><br>
+                Sunday School & Discipleship Class<br>
+                <strong>9:45 am</strong><br>
+                Morning Worship<br>
+                <strong>First Sunday</strong><br>
+        </div>
+        <div class="panel">
+            <h3>Wednesday</h3>
+
+            <p><strong>12:00 pm</strong><br>
+                Noon Day Prayer<br>
+                <strong>6:00 pm</strong><br>
+                Healing Service<br>
+                <strong>7:00 pm</strong><br>
+                Adult and Youth Bible Study</p>
+        </div>
+        <div class="panel">
+            <h3>Saturday</h3>
+
+            <p><strong>10:00 am</strong><br>
+                Adult Bible Study</p>
+        </div>
+    </div>
+</div>
+<!-- End modal -->
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/slick.min.js"></script>
@@ -501,5 +563,12 @@
         }).init();
     }());
 </script>
+<script src="js/animsition.min.js" charset="utf-8"></script>
+<script>
+    $(document).ready(function() {
+        $('.animsition').animsition();
+    });
+</script>
+<script src="js/remodal.min.js"></script>
 </body>
 </html>

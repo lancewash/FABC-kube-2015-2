@@ -57,6 +57,19 @@ html.remodal-is-locked {
   p {
     text-align: justify;
   }
+  ul {
+    //max-width: 80%;
+    text-align: left;
+  }
+  li {
+    list-style-type: square;
+    margin-bottom: 1rem;
+    
+    ul li {
+      margin-bottom: .25rem;
+    }
+  }
+  
 }
 
 .remodal-wrapper:after {

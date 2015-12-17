@@ -2399,6 +2399,19 @@ html.remodal-is-locked {
   text-align: justify;
 }
 
+.remodal-wrapper ul {
+  text-align: left;
+}
+
+.remodal-wrapper li {
+  list-style-type: square;
+  margin-bottom: 1rem;
+}
+
+.remodal-wrapper li ul li {
+  margin-bottom: .25rem;
+}
+
 .remodal-wrapper:after {
   display: inline-block;
   height: 100%;

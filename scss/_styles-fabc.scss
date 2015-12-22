@@ -334,20 +334,20 @@ p, a {
     &:after {
       content: "";
       background: url(../img/plus-hover.png) no-repeat;
-      width: 30px;
-      height: 30px;
+      width: 50px;
+      height: 50px;
       display: block;
       position: absolute;
       left: 0;
-      bottom: 40%;
+      bottom: 30%;
       right: 0;
       margin: 0 auto;
       opacity: 0;
-      -webkit-transition: all 0.25s ease-out;
-      -moz-transition: all 0.25s ease-out;
-      -ms-transition: all 0.25s ease-out;
-      -o-transition: all 0.25s ease-out;
-      transition: all 0.25s ease-out;
+      -webkit-transition: all 0.5s ease-out;
+      -moz-transition: all 0.5s ease-out;
+      -ms-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
       //&:hover {
       //  background: url(../img/plus-hover.png) no-repeat;
       //}
@@ -362,20 +362,20 @@ p, a {
     &:after {
     content: "";
     background: url(../img/plus-hover.png) no-repeat;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     display: block;
     position: absolute;
     left: 0;
-    bottom: 50%;
+    bottom: 70%;
     right: 0;
     margin: 0 auto;
     opacity: 1;
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -ms-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
 
 
     //&:hover {
@@ -389,12 +389,16 @@ p, a {
   a {
     display: block;
     padding-bottom: 4rem;
+    margin-bottom: 1.5rem;
     //height: 220px;
     //position: relative;
 
     &:hover {
-      cursor: zoom-in;
+      //cursor: zoom-in;
       text-decoration: none;
+      //opacity: .5;
+      //background: rgba(0,0,0,.05);
+      //padding: 2rem 0;
     }
 
     img {

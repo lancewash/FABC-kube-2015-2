@@ -5487,17 +5487,17 @@ p, a {
 .profile-link p:after {
   content: "";
   background: url(../img/plus-hover.png) no-repeat;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   display: block;
   position: absolute;
   left: 0;
-  bottom: 40%;
+  bottom: 30%;
   right: 0;
   margin: 0 auto;
   opacity: 0;
-  -webkit-transition: all 0.25s ease-out;
-  transition: all 0.25s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 .profile-link:hover p {
@@ -5507,27 +5507,26 @@ p, a {
 .profile-link:hover p:after {
   content: "";
   background: url(../img/plus-hover.png) no-repeat;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   display: block;
   position: absolute;
   left: 0;
-  bottom: 50%;
+  bottom: 70%;
   right: 0;
   margin: 0 auto;
   opacity: 1;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 
 .profile-link a {
   display: block;
   padding-bottom: 4rem;
+  margin-bottom: 1.5rem;
 }
 
 .profile-link a:hover {
-  cursor: -webkit-zoom-in;
-  cursor: zoom-in;
   text-decoration: none;
 }
 

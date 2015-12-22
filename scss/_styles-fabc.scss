@@ -139,8 +139,16 @@
       border-bottom: 1px solid rgba(255,255,255,.75);
     }
   }
-  .inverted-wrap-item li a {
-    color: $colorLink;
+  .inverted-wrap-item li {
+
+    &.unit-50:nth-last-of-type(even) {
+      margin-left: 0 !important;
+    }
+
+    a {
+      color: $colorLink;
+      margin-bottom: 1em;
+    }
     
     &:hover {
       color: $colorLinkHover;
@@ -199,7 +207,31 @@ div.episode,
   }
 }
 .inverted-wrap-item {
-  background: rgba(255,255,255,.95);
+  background: none;
+  padding: 0;
+
+  //&:hover {
+  //  background: rgba(255,255,255,1);
+  //}
+
+  li {
+
+    a {
+      background: rgba(255,255,255,.95);
+      display: block;
+      padding: 1.5em;
+
+      &:hover {
+        background: rgba(255,255,255,1);
+      }
+    }
+  }
+}
+.date {
+  background: #BF3313;
+  color: rgba(255,255,255,1);
+  font-weight: 800;
+  padding:.5em 1.5em;
 }
 div.episode p.description {
   position: absolute;
@@ -265,6 +297,10 @@ p, a {
         //}
       }
   }
+  
+  //strong {
+  //  color: rgba(0,0,0,.75);
+  //}
 
   &.unit-33 {
 

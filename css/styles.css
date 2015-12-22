@@ -1869,6 +1869,7 @@ Navigation Styles
   width: 100%;
   opacity: 1;
   visibility: visible;
+  z-index: 9999999999;
 }
 
 .sticky a {

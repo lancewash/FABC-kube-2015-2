@@ -2698,6 +2698,7 @@ html.remodal-is-locked {
 
 .modal-doc {
   height: 100%;
+  position: relative;
 }
 
 /* Media queries
@@ -2710,6 +2711,7 @@ html.remodal-is-locked {
   .remodal-doc {
     width: 90%;
     max-width: 90%;
+    position: relative;
   }
 }
 
@@ -4691,6 +4693,13 @@ Example markup
   animation-name: overlay-slide-out-right;
 }
 
+#loading-indicator {
+  position: absolute;
+  left: 30%;
+  top: 20%;
+  z-index: 9999999999;
+}
+
 /* =Tables
 -----------------------------------------------------------------------------*/
 table.table-bordered td,
@@ -5348,11 +5357,16 @@ button:hover, .button:hover {
   border-bottom: 1px solid rgba(255, 255, 255, 0.75);
 }
 
-.inverted-wrap .inverted-wrap-item li a {
-  color: #BF3313;
+.inverted-wrap .inverted-wrap-item li.unit-50:nth-last-of-type(even) {
+  margin-left: 0 !important;
 }
 
-.inverted-wrap .inverted-wrap-item li a:hover {
+.inverted-wrap .inverted-wrap-item li a {
+  color: #BF3313;
+  margin-bottom: 1em;
+}
+
+.inverted-wrap .inverted-wrap-item li:hover {
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -5397,7 +5411,25 @@ div.episode li a:hover,
 }
 
 .inverted-wrap-item {
+  background: none;
+  padding: 0;
+}
+
+.inverted-wrap-item li a {
   background: rgba(255, 255, 255, 0.95);
+  display: block;
+  padding: 1.5em;
+}
+
+.inverted-wrap-item li a:hover {
+  background: white;
+}
+
+.date {
+  background: #BF3313;
+  color: white;
+  font-weight: 800;
+  padding: 0.5em 1.5em;
 }
 
 div.episode p.description {

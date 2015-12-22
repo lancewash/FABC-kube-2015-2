@@ -406,6 +406,7 @@ html.remodal-is-locked {
 }
 .modal-doc {
   height: 100%;
+  position: relative;
 }
 /* Media queries
    ========================================================================== */
@@ -418,6 +419,7 @@ html.remodal-is-locked {
   .remodal-doc {
     width: 90%;
     max-width: 90%;
+    position: relative;
   }
 }
 

@@ -1578,6 +1578,73 @@ i.icon.facebook.official {
 
 /* Stats */
 /* Breadcrumbs */
+.breadcrumbs {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 26px;
+  margin-bottom: 1.6rem;
+  max-width: 400px;
+  width: 50%;
+}
+
+.breadcrumbs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.breadcrumbs ul {
+  font-size: .9em;
+  list-style: none;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.breadcrumbs ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.breadcrumbs ul li {
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.breadcrumbs li + li:before {
+  content: " | ";
+  color: #aaa;
+  font-size: 12px;
+  margin: 0 10px;
+  position: relative;
+  top: -1px;
+}
+
+.breadcrumbs-sections li + li:before {
+  content: " | ";
+  top: 0;
+}
+
+.breadcrumbs-path li + li:before {
+  content: " / ";
+  top: 0;
+}
+
+.breadcrumbs ul li a {
+  text-decoration: none;
+}
+
+.breadcrumbs ul li.active a {
+  text-decoration: none;
+  cursor: text;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.breadcrumbs ul li a:hover {
+  color: #0f0f0f;
+  text-decoration: underline;
+}
+
 /* =Pagination
 -----------------------------------------------------------------------------*/
 /* =Responsive
@@ -1874,7 +1941,7 @@ Navigation Styles
 
 .sticky a {
   color: rgba(255, 255, 255, 0.9);
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   position: relative;
 }
 
@@ -5280,7 +5347,7 @@ button:hover, .button:hover {
 
 .content-wrap h1 {
   line-height: 1.5em;
-  margin-bottom: 1em;
+  margin-bottom: .75em;
   padding-bottom: 1em;
   position: relative;
   text-align: center;
@@ -5487,12 +5554,12 @@ p, a {
 .profile-link p:after {
   content: "";
   background: url(../img/plus-hover.png) no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   display: block;
   position: absolute;
   left: 0;
-  bottom: 30%;
+  bottom: 72%;
   right: 0;
   margin: 0 auto;
   opacity: 0;
@@ -5512,7 +5579,7 @@ p, a {
   display: block;
   position: absolute;
   left: 0;
-  bottom: 70%;
+  bottom: 72%;
   right: 0;
   margin: 0 auto;
   opacity: 1;
@@ -5661,7 +5728,7 @@ body div.episode div.meta p {
 
 body .content-item .episode .description {
   margin-top: .25em;
-  width: 88%;
+  width: 92%;
 }
 
 body div.episode {

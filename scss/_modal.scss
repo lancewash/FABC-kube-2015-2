@@ -1,510 +1,435 @@
-/*!
- * # Semantic UI 2.0.7 - Modal
- * http://github.com/semantic-org/semantic-ui/
+/*
+ *  Remodal - v1.0.6
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
  *
- *
- * Copyright 2015 Contributors
- * Released under the MIT license
- * http://opensource.org/licenses/MIT
- *
+ *  Made by Ilya Makarov
+ *  Under MIT License
  */
 
+/* ==========================================================================
+   Remodal's necessary styles
+   ========================================================================== */
 
-/*******************************
-             Modal
-*******************************/
+/* Hide scroll bar */
 
-.ui.modal {
+html.remodal-is-locked {
+  overflow: hidden;
+
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+/* Anti FOUC */
+
+.remodal,
+[data-remodal-id] {
   display: none;
+}
+
+/* Necessary styles of the overlay */
+
+.remodal-overlay {
   position: fixed;
-  z-index: 1001;
-  top: 50%;
-  left: 50%;
-  text-align: left;
-  background: #ffffff;
-  border: none;
-  box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2), 1px 3px 15px 2px rgba(0, 0, 0, 0.2);
-  -webkit-transform-origin: 50% 25%;
-      -ms-transform-origin: 50% 25%;
-          transform-origin: 50% 25%;
-  border-radius: 0.28571429rem;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
-  will-change: top, left, margin, transform, opacity;
-}
-.ui.modal > :first-child:not(.icon),
-.ui.modal > .icon:first-child + * {
-  border-top-left-radius: 0.28571429rem;
-  border-top-right-radius: 0.28571429rem;
-}
-.ui.modal > :last-child {
-  border-bottom-left-radius: 0.28571429rem;
-  border-bottom-right-radius: 0.28571429rem;
+  z-index: 9999999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+
+  display: none;
 }
 
+/* Necessary styles of the wrapper */
 
-/*******************************
-            Content
-*******************************/
-
-
-/*--------------
-     Close
----------------*/
-
-.ui.modal > .close {
-  cursor: pointer;
-  position: absolute;
-  top: -2.5rem;
-  right: -2.5rem;
-  z-index: 1;
-  opacity: 0.8;
-  font-size: 1.25em;
-  color: #ffffff;
-  width: 2.25rem;
-  height: 2.25rem;
-  padding: 0.625rem 0rem 0rem 0rem;
-}
-.ui.modal > .close:hover {
-  opacity: 1;
-}
-
-/*--------------
-     Header
----------------*/
-
-.ui.modal > .header {
-  display: block;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  background: #ffffff;
-  margin: 0em;
-  padding: 1.25rem 1.5rem;
-  box-shadow: none;
-  color: rgba(0, 0, 0, 0.85);
-  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
-}
-.ui.modal > .header:not(.ui) {
-  font-size: 1.42857143rem;
-  line-height: 1.2857em;
-  font-weight: bold;
-}
-
-/*--------------
-     Content
----------------*/
-
-.ui.modal > .content {
-  display: block;
-  width: 100%;
-  font-size: 1em;
-  line-height: 1.4;
-  padding: 1.5rem;
-  background: #ffffff;
-}
-.ui.modal > .image.content {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-/* Image */
-.ui.modal > .content > .image {
-  display: block;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  width: '';
-  -webkit-align-self: top;
-      -ms-flex-item-align: top;
-          align-self: top;
-}
-.ui.modal > [class*="top aligned"] {
-  -webkit-align-self: top;
-      -ms-flex-item-align: top;
-          align-self: top;
-}
-.ui.modal > [class*="middle aligned"] {
-  -webkit-align-self: middle;
-      -ms-flex-item-align: middle;
-          align-self: middle;
-}
-.ui.modal > [class*="stretched"] {
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-          align-self: stretch;
-}
-
-/* Description */
-.ui.modal > .content > .description {
-  display: block;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  min-width: 0px;
-  -webkit-align-self: top;
-      -ms-flex-item-align: top;
-          align-self: top;
-}
-.ui.modal > .content > .icon + .description,
-.ui.modal > .content > .image + .description {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  min-width: '';
-  width: auto;
-  padding-left: 2em;
-}
-/*rtl:ignore*/
-.ui.modal > .content > .image > i.icon {
-  margin: 0em;
-  opacity: 1;
-  width: auto;
-  line-height: 1;
-  font-size: 8rem;
-}
-
-/*--------------
-     Actions
----------------*/
-
-.ui.modal > .actions {
-  background: #f9fafb;
-  padding: 1rem 1rem;
-  border-top: 1px solid rgba(34, 36, 38, 0.15);
-  text-align: right;
-}
-.ui.modal .actions > .button {
-  margin-left: 0.75em;
-}
-
-/*-------------------
-       Responsive
---------------------*/
-
-
-/* Modal Width */
-@media only screen and (max-width: 767px) {
-  .ui.modal {
-    width: 95%;
-    margin: 0em 0em 0em -47.5%;
+.remodal-wrapper {
+  position: fixed;
+  z-index: 100000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+  
+  p {
+    text-align: justify;
   }
-}
-@media only screen and (min-width: 768px) {
-  .ui.modal {
-    width: 88%;
-    margin: 0em 0em 0em -44%;
+  ul {
+    //max-width: 80%;
+    text-align: left;
   }
-}
-@media only screen and (min-width: 992px) {
-  .ui.modal {
-    width: 850px;
-    margin: 0em 0em 0em -425px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .ui.modal {
-    width: 900px;
-    margin: 0em 0em 0em -450px;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  .ui.modal {
-    width: 950px;
-    margin: 0em 0em 0em -475px;
-  }
-}
-
-/* Tablet and Mobile */
-@media only screen and (max-width: 992px) {
-  .ui.modal > .header {
-    padding-right: 2.25rem;
-  }
-  .ui.modal > .close {
-    top: 1.0535rem;
-    right: 1rem;
-    color: rgba(0, 0, 0, 0.87);
-  }
-}
-
-/* Mobile */
-@media only screen and (max-width: 767px) {
-  .ui.modal > .header {
-    padding: 0.75rem 1rem !important;
-    padding-right: 2.25rem !important;
-  }
-  .ui.modal > .content {
-    display: block;
-    padding: 1rem !important;
-  }
-  .ui.modal > .close {
-    top: 0.5rem !important;
-    right: 0.5rem !important;
-  }
-  /*rtl:ignore*/
-  .ui.modal .image.content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .ui.modal .content > .image {
-    display: block;
-    max-width: 100%;
-    margin: 0em auto !important;
-    text-align: center;
-    padding: 0rem 0rem 1rem !important;
-  }
-  .ui.modal > .content > .image > i.icon {
-    font-size: 5rem;
-    text-align: center;
-  }
-  /*rtl:ignore*/
-  .ui.modal .content > .description {
-    display: block;
-    width: 100% !important;
-    margin: 0em !important;
-    padding: 1rem 0rem !important;
-    box-shadow: none;
+  li {
+    list-style-type: square;
+    margin-bottom: 1rem;
+    
+    ul li {
+      margin-bottom: .25rem;
+    }
   }
   
-/* Let Buttons Stack */
-  .ui.modal > .actions {
-    padding: 1rem 1rem 0rem !important;
+}
+
+.remodal-wrapper:after {
+  display: inline-block;
+  height: 100%;
+  margin-left: -0.05em;
+  content: "";
+}
+
+/* Fix iPad, iPhone glitches */
+
+.remodal-overlay,
+.remodal-wrapper {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Necessary styles of the modal dialog */
+
+.remodal {
+  position: relative;
+
+  outline: none;
+
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+.remodal-is-initialized {
+  /* Disable Anti-FOUC */
+  display: inline-block;
+}
+
+
+/*
+ *  Remodal - v1.0.6
+ *  Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+/* ==========================================================================
+   Remodal's default mobile first theme
+   ========================================================================== */
+
+/* Default theme styles for the background */
+
+.remodal-bg.remodal-is-opening,
+.remodal-bg.remodal-is-opened {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+}
+
+/* Default theme styles of the overlay */
+
+.remodal-overlay {
+  background: rgba(255,255,255,1);
+
+   .sermons {
+    background: rgba(191, 51, 19, 1);
   }
-  .ui.modal .actions > .buttons,
-  .ui.modal .actions > .button {
-    margin-bottom: 1rem;
+}
+
+.remodal-overlay.remodal-is-opening,
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.remodal-overlay.remodal-is-opening {
+  -webkit-animation-name: remodal-overlay-opening-keyframes;
+  animation-name: remodal-overlay-opening-keyframes;
+}
+
+.remodal-overlay.remodal-is-closing {
+  -webkit-animation-name: remodal-overlay-closing-keyframes;
+  animation-name: remodal-overlay-closing-keyframes;
+}
+
+/* Default theme styles of the wrapper */
+
+.remodal-wrapper {
+  padding: 10px 10px 0;
+}
+
+/* Default theme styles of the modal dialog */
+
+.remodal {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 90%;
+  margin-bottom: 10px;
+  padding: 35px;
+
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  color: #2b2e38;
+  background: transparent;
+
+
+  img.centered {
+    margin: 4rem auto !important;
   }
 }
 
-/*--------------
-    Coupling
----------------*/
-
-.ui.inverted.dimmer > .ui.modal {
-  box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, 0.2);
+.remodal.remodal-is-opening,
+.remodal.remodal-is-closing {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
-
-/*******************************
-             Types
-*******************************/
-
-.ui.basic.modal {
-  background-color: transparent;
-  border: none;
-  border-radius: 0em;
-  box-shadow: none !important;
-  color: #ffffff;
-}
-.ui.basic.modal > .header,
-.ui.basic.modal > .content,
-.ui.basic.modal > .actions {
-  background-color: transparent;
-}
-.ui.basic.modal > .header {
-  color: #ffffff;
-}
-.ui.basic.modal > .close {
-  top: 1rem;
-  right: 1.5rem;
-}
-.ui.inverted.dimmer > .basic.modal {
-  color: rgba(0, 0, 0, 0.87);
-}
-.ui.inverted.dimmer > .ui.basic.modal > .header {
-  color: rgba(0, 0, 0, 0.85);
+.remodal.remodal-is-opening {
+  -webkit-animation-name: remodal-opening-keyframes;
+  animation-name: remodal-opening-keyframes;
 }
 
-/* Tablet and Mobile */
-@media only screen and (max-width: 992px) {
-  .ui.basic.modal > .close {
-    color: #ffffff;
-  }
+.remodal.remodal-is-closing {
+  -webkit-animation-name: remodal-closing-keyframes;
+  animation-name: remodal-closing-keyframes;
 }
 
+/* Vertical align of the modal dialog */
 
-/*******************************
-             States
-*******************************/
-
-.ui.active.modal {
-  display: block;
+.remodal,
+.remodal-wrapper:after {
+  vertical-align: middle;
 }
 
+/* Close button */
 
-/*******************************
-           Variations
-*******************************/
-
-
-/*--------------
-    Scrolling
----------------*/
-
-
-/* A modal that cannot fit on the page */
-.scrolling.dimmable.dimmed {
-  overflow: hidden;
-}
-.scrolling.dimmable.dimmed > .dimmer {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.scrolling.dimmable > .dimmer {
-  position: fixed;
-}
-.modals.dimmer .ui.scrolling.modal {
-  position: static !important;
-  margin: 3.5rem auto !important;
-}
-
-/* undetached scrolling */
-.scrolling.undetached.dimmable.dimmed {
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-.scrolling.undetached.dimmable.dimmed > .dimmer {
-  overflow: hidden;
-}
-.scrolling.undetached.dimmable .ui.scrolling.modal {
+.remodal-close {
   position: absolute;
-  left: 50%;
-  margin-top: 3.5rem !important;
+  top: 2rem;
+  right: -4rem;
+  display: block;
+  overflow: visible;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  text-decoration: none;
+  border: 0;
+  outline: 0;
+  background: url("../img/close-x.png") no-repeat;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-/* Coupling with Sidebar */
-.undetached.dimmable.dimmed > .pusher {
-  z-index: auto;
+.remodal-close:hover,
+.remodal-close:focus {
+  background: url("../img/close-x.png") no-repeat;
+  opacity: .5;
 }
-@media only screen and (max-width: 992px) {
-  .modals.dimmer .ui.scrolling.modal {
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
+
+//.remodal-close:before {
+//  font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif !important;
+//  font-size: 25px;
+//  line-height: 35px;
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  display: block;
+//  width: 35px;
+//  content: "\00d7";
+//  text-align: center;
+//}
+
+/* Dialog buttons */
+
+.remodal-confirm,
+.remodal-cancel {
+  font: inherit;
+
+  display: inline-block;
+  overflow: visible;
+
+  min-width: 110px;
+  margin: 0;
+  padding: 12px 0;
+
+  cursor: pointer;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+
+  border: 0;
+  outline: 0;
+}
+
+.remodal-confirm {
+  color: #fff;
+  background: #81c784;
+}
+
+.remodal-confirm:hover,
+.remodal-confirm:focus {
+  background: #66bb6a;
+}
+
+.remodal-cancel {
+  color: #fff;
+  background: #e57373;
+}
+
+.remodal-cancel:hover,
+.remodal-cancel:focus {
+  background: #ef5350;
+}
+
+/* Remove inner padding and border in Firefox 4+ for the button tag. */
+
+.remodal-confirm::-moz-focus-inner,
+.remodal-cancel::-moz-focus-inner,
+.remodal-close::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Keyframes
+   ========================================================================== */
+
+@-webkit-keyframes remodal-opening-keyframes {
+  from {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: none;
+    transform: none;
+
+    opacity: 1;
   }
 }
 
-/*--------------
-   Full Screen
----------------*/
+@keyframes remodal-opening-keyframes {
+  from {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 
-.ui.fullscreen.modal {
-  width: 95% !important;
-  left: 2.5% !important;
-  margin: 1em auto;
-}
-.ui.fullscreen.scrolling.modal {
-  left: 0em !important;
-}
-.ui.fullscreen.modal > .header {
-  padding-right: 2.25rem;
-}
-.ui.fullscreen.modal > .close {
-  top: 1.0535rem;
-  right: 1rem;
-  color: rgba(0, 0, 0, 0.87);
-}
-
-/*--------------
-      Size
----------------*/
-
-.ui.modal {
-  font-size: 1rem;
-}
-
-/* Small */
-.ui.small.modal > .header:not(.ui) {
-  font-size: 1.3em;
-}
-
-/* Small Modal Width */
-@media only screen and (max-width: 767px) {
-  .ui.small.modal {
-    width: 95%;
-    margin: 0em 0em 0em -47.5%;
+    opacity: 0;
   }
-}
-@media only screen and (min-width: 768px) {
-  .ui.small.modal {
-    width: 70.4%;
-    margin: 0em 0em 0em -35.2%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .ui.small.modal {
-    width: 680px;
-    margin: 0em 0em 0em -340px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .ui.small.modal {
-    width: 720px;
-    margin: 0em 0em 0em -360px;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  .ui.small.modal {
-    width: 760px;
-    margin: 0em 0em 0em -380px;
+  to {
+    -webkit-transform: none;
+    transform: none;
+
+    opacity: 1;
   }
 }
 
-/* Large Modal Width */
-.ui.large.modal > .header {
-  font-size: 1.6em;
-}
-@media only screen and (max-width: 767px) {
-  .ui.large.modal {
-    width: 95%;
-    margin: 0em 0em 0em -47.5%;
+@-webkit-keyframes remodal-closing-keyframes {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+
+    opacity: 1;
   }
-}
-@media only screen and (min-width: 768px) {
-  .ui.large.modal {
-    width: 88%;
-    margin: 0em 0em 0em -44%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .ui.large.modal {
-    width: 1020px;
-    margin: 0em 0em 0em -510px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .ui.large.modal {
-    width: 1080px;
-    margin: 0em 0em 0em -540px;
-  }
-}
-@media only screen and (min-width: 1920px) {
-  .ui.large.modal {
-    width: 1140px;
-    margin: 0em 0em 0em -570px;
+  to {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+
+    opacity: 0;
   }
 }
 
+@keyframes remodal-closing-keyframes {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
 
-/*******************************
-         Theme Overrides
-*******************************/
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
 
+    opacity: 0;
+  }
+}
 
+@-webkit-keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
-/*******************************
-         Site Overrides
-*******************************/
+@keyframes remodal-overlay-opening-keyframes {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
+@-webkit-keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes remodal-overlay-closing-keyframes {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.modal-doc {
+  height: 100%;
+  position: relative;
+}
+/* Media queries
+   ========================================================================== */
+
+@media only screen and (min-width: 641px) {
+  .remodal {
+    height: 100%;
+    max-width: 960px;
+  }
+  .remodal-doc {
+    width: 90%;
+    max-width: 90%;
+    position: relative;
+  }
+}
+
+/* IE8
+   ========================================================================== */
+
+.lt-ie9 .remodal-overlay {
+  background: #2b2e38;
+}
+
+.lt-ie9 .remodal {
+  width: 700px;
+}

@@ -5421,7 +5421,7 @@ div.episode li a:hover,
 }
 
 .inverted-wrap-item li a {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.85);
   display: block;
   padding: 1.5em;
 }
@@ -5430,11 +5430,42 @@ div.episode li a:hover,
   background: white;
 }
 
-.date {
-  background: #BF3313;
+.event-list li, .announce-list li {
+  position: relative;
+}
+
+.event-list li .date, .event-list li .announce, .announce-list li .date, .announce-list li .announce {
   color: white;
+  font-size: 2.5rem;
   font-weight: 800;
-  padding: 0.5em 1.5em;
+  height: 100%;
+  padding: .5em;
+  position: absolute;
+  text-align: center;
+  width: 3em;
+}
+
+.event-list li .date span, .event-list li .announce span, .announce-list li .date span, .announce-list li .announce span {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: .25rem;
+  width: 100%;
+}
+
+.event-list li .date, .announce-list li .date {
+  background: #BF3313;
+  display: block;
+  text-transform: uppercase;
+}
+
+.event-list li .announce, .announce-list li .announce {
+  background: #344B56;
+}
+
+.event-list li a, .announce-list li a {
+  display: clock;
+  min-height: 100px;
+  padding-left: 12em;
 }
 
 div.episode p.description {

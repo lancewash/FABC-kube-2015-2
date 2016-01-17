@@ -1403,9 +1403,18 @@ i.icon.facebook.official {
 
 [class*="blocks-"] img {
   margin-bottom: 1em !important;
+  border: 1px solid rgba(255, 255, 255, 0);
   margin-left: auto;
   margin-right: auto;
   display: block;
+  margin-top: 1em;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+[class*="blocks-"] li:hover img {
+  border: 1px solid white;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
 }
 
 /* =Responsive

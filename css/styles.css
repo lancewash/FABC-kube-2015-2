@@ -253,6 +253,16 @@ audio {
 /* =Fonts
 -----------------------------------------------------------------------------*/
 @font-face {
+  font-family: 'AvenirLTStd-Roman';
+  src: url("fonts/AvenirLTStd-Roman_gdi.eot");
+  src: url("fonts/AvenirLTStd-Roman_gdi.eot?#iefix") format("embedded-opentype"), url("fonts/AvenirLTStd-Roman_gdi.woff") format("woff"), url("fonts/AvenirLTStd-Roman_gdi.ttf") format("truetype"), url("fonts/AvenirLTStd-Roman_gdi.svg#AvenirLTStd-Roman") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U20-25CA;
+}
+
+@font-face {
   font-family: 'merriweatherregular';
   src: url("fonts/merriweather-regular-webfont.eot");
   src: url("fonts/merriweather-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/merriweather-regular-webfont.woff2") format("woff2"), url("fonts/merriweather-regular-webfont.woff") format("woff"), url("fonts/merriweather-regular-webfont.ttf") format("truetype"), url("fonts/merriweather-regular-webfont.svg#merriweatherregular") format("svg");
@@ -308,7 +318,11 @@ body {
   font-size: 14px;
   line-height: 26px;
   line-height: 1.6rem;
-  font-family: "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "AvenirLTStd-Roman", "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+p, li, a {
+  font-size: 1rem;
 }
 
 a {
@@ -343,16 +357,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-family: "AvenirLTStd-Roman", "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
   color: #344B56;
   text-rendering: optimizeLegibility;
   text-transform: uppercase;
-  letter-spacing: .075em;
+  letter-spacing: 2.5px;
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 24px;
   line-height: 1.111em;
   margin-bottom: .25em;
 }
@@ -405,16 +419,6 @@ td,
 th {
   line-height: 26px;
   line-height: 1.6rem;
-}
-
-ul,
-ol,
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-  margin: 0px 0px 0px 26px;
-  margin: 0rem 0rem 0rem 1.6rem;
 }
 
 ol ol li {
@@ -508,7 +512,7 @@ dfn[title] {
 strong,
 b {
   color: #a82d11;
-  font-weight: bold;
+  font-weight: 200;
 }
 
 em,
@@ -609,7 +613,7 @@ input[type="search"],
 input[type="datetime-local"],
 textarea,
 select[multiple="multiple"] {
-  font-family: "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "AvenirLTStd-Roman", "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 1;
   font-size: 14px;
   border-radius: 0;
@@ -899,6 +903,7 @@ i.icon.facebook.official {
   padding-left: 2em;
   padding-right: 2em;
   margin-top: -1px;
+  margin-left: -1px;
 }
 
 .row {
@@ -1497,16 +1502,17 @@ i.icon.facebook.official {
     display: table;
     clear: both;
   }
-  .navbar ul li {
+  .navbar li {
     float: left;
     margin-right: 26px;
     margin-right: 1.6rem;
   }
-  .navbar ul li a {
+  .navbar li a {
+    font-size: .8rem;
     display: block;
     text-decoration: none;
   }
-  .navbar ul li a:hover {
+  .navbar li a:hover {
     color: rgba(0, 0, 0, 0.9);
   }
   /* Fullwidth */
@@ -1533,7 +1539,6 @@ i.icon.facebook.official {
     margin: 0;
   }
   .nav ul li a {
-    display: block;
     padding: 5px 0;
   }
   .nav ul li a {
@@ -1550,17 +1555,15 @@ i.icon.facebook.official {
     opacity: .5;
   }
   .nav-stacked ul li a {
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    display: inline-block;
     font-size: .85rem;
-    padding: 6px 0;
+    padding: .5em 0;
   }
   .nav-stacked ul li a:hover {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: black;
     text-decoration: none;
   }
   .inverted-wrap .nav-stacked ul li a:hover, [class^="p-"] .nav-stacked ul li a:hover {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
   }
   /* Stats */
@@ -1744,8 +1747,8 @@ i.icon.facebook.official {
   }
   .nav-main ul a {
     background: rgba(0, 0, 0, 0.2);
-    font-family: "montserratbold";
-    letter-spacing: .1em;
+    font-weight: 900;
+    letter-spacing: 2.5px;
     margin-left: 1px;
     color: white;
     text-transform: uppercase;
@@ -2091,7 +2094,7 @@ header.header-fixed.slide-reset.headroom-top {
 .banner-head-wrap h1 {
   color: white;
   font-size: 4rem;
-  margin-top: 56px;
+  margin-top: 59px;
   text-align: center;
 }
 
@@ -2117,10 +2120,10 @@ header.header-fixed.slide-reset.headroom-top {
 
 .banner-head-wrap a {
   color: white;
-  font-family: "montserratbold";
+  font-weight: 800;
   display: block;
   height: 130px;
-  letter-spacing: .05em;
+  letter-spacing: 2px;
   padding: 4em 0 0;
   text-align: center;
   text-decoration: none;
@@ -2161,7 +2164,7 @@ header.header-fixed.slide-reset.headroom-top {
 .banner-items span {
   display: block;
   font-size: .9rem;
-  margin-top: 1.75rem;
+  margin-top: .5rem;
 }
 
 .banner-items:hover .banner-items {
@@ -2825,7 +2828,8 @@ Example markup
  * License : MIT
  * Author : blivesta (http://blivesta.com/)
  */
-.animsition, .animsition-overlay {
+.animsition,
+.animsition-overlay {
   position: relative;
   opacity: 0;
   -webkit-animation-fill-mode: both;
@@ -2840,9 +2844,10 @@ Example markup
   background-color: #ddd;
 }
 
-.animsition-loading, .animsition-loading:after {
-  width: 2pc;
-  height: 2pc;
+.animsition-loading,
+.animsition-loading:after {
+  width: 5em;
+  height: 5em;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -2853,21 +2858,7 @@ Example markup
 }
 
 .animsition-loading {
-  background-color: transparent;
-  border-top: 5px solid rgba(0, 0, 0, 0.2);
-  border-right: 5px solid rgba(0, 0, 0, 0.2);
-  border-bottom: 5px solid rgba(0, 0, 0, 0.2);
-  border-left: 5px solid #eee;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-duration: .8s;
-  animation-duration: .8s;
-  -webkit-animation-name: animsition-loading;
-  animation-name: animsition-loading;
+  background: url("../img/94.gif") no-repeat 50% 50%;
 }
 
 @-webkit-keyframes animsition-loading {
@@ -3664,7 +3655,8 @@ Example markup
             transform-origin: center center;
     opacity: 0;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3684,7 +3676,8 @@ Example markup
             transform-origin: center center;
     opacity: 0;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3709,7 +3702,8 @@ Example markup
             transform-origin: center center;
     opacity: 1;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3729,7 +3723,8 @@ Example markup
             transform-origin: center center;
     opacity: 1;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3754,7 +3749,8 @@ Example markup
             transform-origin: center center;
     opacity: 0;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3774,7 +3770,8 @@ Example markup
             transform-origin: center center;
     opacity: 0;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3799,7 +3796,8 @@ Example markup
             transform-origin: center center;
     opacity: 1;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3819,7 +3817,8 @@ Example markup
             transform-origin: center center;
     opacity: 1;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3844,7 +3843,8 @@ Example markup
             transform-origin: center center;
     opacity: 0;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3864,7 +3864,8 @@ Example markup
             transform-origin: center center;
     opacity: 0;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3889,7 +3890,8 @@ Example markup
             transform-origin: center center;
     opacity: 1;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -3909,7 +3911,8 @@ Example markup
             transform-origin: center center;
     opacity: 1;
   }
-  0%, to {
+  0%,
+  to {
     -webkit-transform-origin: center center;
   }
   to {
@@ -4359,7 +4362,8 @@ Example markup
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
   }
-  50%, to {
+  50%,
+  to {
     opacity: 0;
   }
 }
@@ -4374,7 +4378,8 @@ Example markup
     -webkit-transform: scale(0.7);
     transform: scale(0.7);
   }
-  50%, to {
+  50%,
+  to {
     opacity: 0;
   }
 }
@@ -4421,7 +4426,8 @@ Example markup
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
   }
-  50%, to {
+  50%,
+  to {
     opacity: 0;
   }
 }
@@ -4436,7 +4442,8 @@ Example markup
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
   }
-  50%, to {
+  50%,
+  to {
     opacity: 0;
   }
 }
@@ -4483,7 +4490,8 @@ Example markup
     -webkit-transform: scale(0.4);
     transform: scale(0.4);
   }
-  50%, to {
+  50%,
+  to {
     opacity: 0;
   }
 }
@@ -4498,7 +4506,8 @@ Example markup
     -webkit-transform: scale(0.4);
     transform: scale(0.4);
   }
-  50%, to {
+  50%,
+  to {
     opacity: 0;
   }
 }
@@ -5007,7 +5016,7 @@ input[type="search"] {
 .btn {
   display: inline-block;
   vertical-align: top;
-  font-family: "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "AvenirLTStd-Roman", "montserratlight", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1;
@@ -5126,6 +5135,10 @@ button:hover, .button:hover {
   margin-bottom: 0 !important;
 }
 
+.top {
+  padding-top: 4rem;
+}
+
 .left {
   float: left;
 }
@@ -5231,11 +5244,29 @@ button:hover, .button:hover {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  padding-top: 3rem;
+  padding-top: 4rem;
+  position: relative;
+}
+
+.content-wrap > p strong {
+  margin: 0 auto;
+  position: absolute;
+  opacity: .5;
+  left: 0;
+  text-transform: uppercase;
+  right: 0;
+  letter-spacing: .25rem;
+  text-align: center;
+  font-size: 2rem;
+  top: 45%;
 }
 
 .content-wrap:not([class^="p-"]) {
   min-height: 300px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .content-wrap.intro {
@@ -5293,7 +5324,7 @@ button:hover, .button:hover {
 
 .content-wrap h1 {
   line-height: 1.5em;
-  margin-bottom: .75em;
+  margin-bottom: 2em;
   padding-bottom: 1em;
   position: relative;
   text-align: center;
@@ -5361,14 +5392,15 @@ button:hover, .button:hover {
 }
 
 .inverted-wrap li a {
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.5);
   color: rgba(255, 255, 255, 0.85);
-  font-size: 1.1rem;
+  display: inline;
+  font-size: .9rem;
   line-height: 1.75;
+  padding: .5em 0;
 }
 
 .inverted-wrap li a:hover {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  color: white;
 }
 
 .inverted-wrap .inverted-wrap-item li.unit-50:nth-last-of-type(even) {
@@ -5445,19 +5477,17 @@ div.episode li a:hover,
 
 .event-list li .date, .event-list li .announce, .announce-list li .date, .announce-list li .announce {
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   font-weight: 800;
   height: 100%;
-  padding: .5em;
+  padding: 0.25em 0.5em;
   position: absolute;
-  text-align: center;
-  width: 3em;
+  width: 4.5em;
 }
 
 .event-list li .date span, .event-list li .announce span, .announce-list li .date span, .announce-list li .announce span {
   display: block;
-  font-size: 1.5rem;
-  margin-bottom: .25rem;
+  font-size: 1rem;
   width: 100%;
 }
 
@@ -5507,6 +5537,14 @@ p, a {
   padding: 0.5em 0.75em;
   text-align: center;
   text-decoration: none;
+}
+
+hr {
+  display: block;
+  height: 0;
+  border: 0;
+  margin: 1em 0;
+  border-top: 1px solid transparent;
 }
 
 .profile-link {
@@ -5591,7 +5629,7 @@ p, a {
 }
 
 .large-header {
-  font-size: 175%;
+  font-size: 135%;
 }
 
 .small-header {
@@ -5641,7 +5679,7 @@ li {
 .google-map {
   margin-bottom: 2px;
   position: relative;
-  height: 500px;
+  height: 800px;
   overflow: hidden;
 }
 
@@ -5671,8 +5709,7 @@ main .row.top {
 }
 
 footer.container {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  min-height: 800px;
 }
 
 .centered-content h1, .centered-content h2, .centered-content h3, .centered-content h4, .centered-content p, .centered-content ul, .centered-content li {

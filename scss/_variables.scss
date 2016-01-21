@@ -1,6 +1,6 @@
 // Font
-$baseFontFamily: 'montserratlight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$headingsFontFamily: 'montserratlight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$baseFontFamily: 'AvenirLTStd-Roman', 'montserratlight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$headingsFontFamily: 'AvenirLTStd-Roman', 'montserratlight', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $controlsFontFamily: $baseFontFamily;
 $codeFontFamily: Menlo, Monaco, Consolas, "Courier New", monospace;
 $mainNavFontFamily: 'montserratbold';
@@ -24,7 +24,7 @@ $baseLine: $baseFontSize * $baseLineHeight;
 $baseLineInEms: $baseLine / $baseFontSize;
 
 // Heading
-$h1FontSize: $baseFontSize + 14px; // 36px
+$h1FontSize: $baseFontSize + 10px; // 36px
 $h2FontSize: $baseFontSize + 8px; // 30px
 $h3FontSize: $baseFontSize + 2px; // 24px
 $h4FontSize: $baseFontSize + 4px; // 18px

@@ -13,6 +13,8 @@
     padding-left: 2em;
     padding-right: 2em;
     margin-top: -1px;
+    margin-left: -1px;
+    //margin-right: -1px;
 }
 .row {
     @include rem('margin-bottom', $baseLineInEms);

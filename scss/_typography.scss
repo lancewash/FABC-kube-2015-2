@@ -7,6 +7,9 @@ body {
     @include rem('line-height', $baseLineInEms);
     font-family: $baseFontFamily;
 }
+p, li, a {
+    font-size: 1rem;
+}
 a {
     color: $colorLink;
     &:focus,
@@ -54,11 +57,11 @@ h4,
 h5,
 h6 {
     font-family: $headingsFontFamily;
-    font-weight: 600;
+    font-weight: 100;
     color: $colorHeadings;
     text-rendering: optimizeLegibility;
     text-transform: uppercase;
-    letter-spacing: .075em;
+    letter-spacing: 2.5px;
 }
 h1 {
     font-size: $h1FontSize;
@@ -149,7 +152,7 @@ ul ul,
 ol ol,
 ul ol,
 ol ul {
-    @include rem('margin', 0, 0, 0, $baseLineInEms);
+    //@include rem('margin', 0, 0, 0, $baseLineInEms);
 }
 ol ol li {
     list-style-type: lower-alpha;
@@ -218,7 +221,7 @@ dfn[title] {
 strong,
 b {
     color: #a82d11;
-    font-weight: bold;
+    font-weight: 200;
 }
 em,
 i {

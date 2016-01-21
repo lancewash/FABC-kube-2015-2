@@ -12,6 +12,7 @@
         @include rem('margin-bottom', $baseLineInEms);
         margin-left: $gridGutterWidth / ($gridWidth / 100) * 1%;
     }
+
 }
 
 .blocks-4 > li { @include block(4); }
@@ -27,9 +28,21 @@
 
     img {
         margin-bottom: 1em !important;
+        border: 1px solid rgba(255,255,255,0);
         margin-left: auto;
         margin-right: auto;
         display: block;
+        margin-top: 1em;
+        -webkit-transition: all 0.25s ease-in-out;
+        -moz-transition: all 0.25s ease-in-out;
+        -ms-transition: all 0.25s ease-in-out;
+        -o-transition: all 0.25s ease-in-out;
+        transition: all 0.25s ease-in-out;
+    }
+
+    li:hover img {
+        border: 1px solid rgba(255,255,255,1);
+        box-shadow: 0 0 16px rgba(0,0,0,.5);
     }
 }
 /* =Responsive

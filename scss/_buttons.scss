@@ -1,35 +1,36 @@
 /* =Buttons
 -----------------------------------------------------------------------------*/
-.btn {
-    display: inline-block;
-    vertical-align: top;
-
-    font-family: $controlsFontFamily;
-    font-size: $baseFontSize + 0px;
-    font-weight: 400;
-
-    line-height: 1;
-
-    text-align: center;
-    text-decoration: none;
-    color: $colorBody;
-
-    margin: 0;
-    border: none;
-    border-radius: 3px;
-    box-shadow: none;
-
-    cursor: pointer;
-
-    background: #eeeded;
-    padding: 9px 20px;
-    height: 2.3em;
-
-    &:hover {
-        color: rgba(0, 0, 0, .5);
-        background: #dbdada;
-    }
-}
+//.button {
+//    display: inline-block;
+//    vertical-align: top;
+//
+//    font-family: $controlsFontFamily;
+//    font-size: $baseFontSize + 0px;
+//    font-weight: 400;
+//
+//    line-height: 1;
+//
+//    text-align: center;
+//    text-decoration: none;
+//    color: $colorBody;
+//
+//    margin: 0;
+//    border: none;
+//    border-radius: 3px;
+//    box-shadow: none;
+//
+//    cursor: pointer;
+//
+//    background: #eeeded;
+//    padding: 9px 20px;
+//    height: 2.3em;
+//
+//    &:hover {
+//        color: rgba(0, 0, 0, .5);
+//        background: #dbdada;
+//        text-decoration: none;
+//    }
+//}
 input[type="submit"].btn {
     -webkit-appearance: none;
 }
@@ -184,12 +185,12 @@ button, .button {
     letter-spacing: .1rem;
     line-height: normal;
     margin: 0;
-    width: 220px;
+    width: 240px;
     position: relative;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    padding: .75rem 0;
+    padding: 1rem 0;
     font-size: .7rem;
     background-color: #BF3313;
     border-color: #007095;
@@ -218,11 +219,13 @@ button, .button {
         -webkit-transition: all .5s ease;
     }
     &:hover {
+        text-decoration: none !important;
 
         .button-is-hidden {
             bottom: 0;
         }
     }
+
 }
 /*.inverted, .content-row {
 
@@ -255,6 +258,7 @@ button, .button {
         -webkit-transition: all .5s ease;
     }
     &:hover {
+        text-decoration: none;
 
         .button-is-hidden {
             bottom: 0;

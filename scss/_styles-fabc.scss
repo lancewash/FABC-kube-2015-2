@@ -389,6 +389,7 @@ hr {
   //}
 
   p {
+    color: $colorBody;
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 0;
@@ -594,14 +595,28 @@ li {
   margin-bottom: 2em;
 }
 .google-map {
+  //box-shadow: 0 0 20px rgba(0,0,0,.5);
+  //border: 1px solid #fff;
   margin-bottom: 2px;
   position: relative;
   //padding-bottom: 50%; // This is the aspect ratio
-  height: 800px;
+  //height: 800px;
+  min-height: 300px;
   overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+  }
   
   .i4ewOd-pzNkMb-haAclf {
-    background: #344b56 !important;
+    //background: #344b56 !important;
+    border: 5px solid #344b56;
+    display: none;
   }
 
   iframe {
@@ -633,7 +648,17 @@ footer {
   &.container {
     //padding-top: 3rem;
     //padding-bottom: 3rem;
-    min-height: 800px;
+    //min-height: 800px;
+  }
+
+  .nav-wrap {
+    //background: rgba(0,0,0,.5);
+    //background: rgba(77,106,121,.2);
+    padding: 1em 2em;
+
+    .navbar {
+      margin-bottom: 0;
+    }
   }
 }
 .centered-content {

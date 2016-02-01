@@ -17,6 +17,12 @@ a {
         color: $colorLinkHover;
         text-decoration: underline;
     }
+    &.button {
+        
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 p>a {
 
@@ -66,17 +72,17 @@ h6 {
 h1 {
     font-size: $h1FontSize;
     line-height: 1.111em;
-    margin-bottom: .25em;
+    margin-bottom: 1.25em;
 }
 h2 {
     font-size: $h2FontSize;
     line-height: 1.111em;
-    margin-bottom: .5em;
+    margin-bottom: 1.5em;
 }
 h3 {
     font-size: $h3FontSize;
     line-height: 1.333em;
-    margin-bottom: .5em;
+    margin-bottom: 1.5em;
 }
 h4 {
     font-size: $h4FontSize;
@@ -221,7 +227,7 @@ dfn[title] {
 strong,
 b {
     color: #a82d11;
-    font-weight: 200;
+    font-weight: 600;
 }
 em,
 i {

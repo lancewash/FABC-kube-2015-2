@@ -18,7 +18,7 @@
   width: auto;
   float: none;
   margin-left: 0;
-  @include rem('margin-bottom', $baseLineInEms);
+  //@include rem('margin-bottom', $baseLineInEms);
 }
 
 
@@ -67,8 +67,8 @@ header {
 
 /* NavBar */
 .navbar {
-  @include rem('margin-bottom', $baseLineInEms);
-  @include clearfix;
+  //@include rem('margin-bottom', $baseLineInEms);
+  //@include clearfix;
 
   &.sticky {
     margin-bottom: 0;
@@ -83,11 +83,11 @@ header {
 .navbar ul {
   list-style: none;
   margin: 0;
-  @include clearfix;
+  //@include clearfix;
 }
 .navbar ul li {
   float: left;
-  @include rem('margin-right', $baseLineInEms);
+  //@include rem('margin-right', $baseLineInEms);
 }
 //.navbar-right ul li {
 //    margin-right: 0;
@@ -100,7 +100,7 @@ header {
   text-decoration: none;
 }
 .navbar ul li a:hover {
-  color: $colorLinkHover;
+  //color: $colorLinkHover;
 }
 //.navbar ul li.active a,
 //.navbar ul li span {
@@ -130,7 +130,7 @@ header {
 
 /* Vertical */
 .nav {
-  @include rem('margin-bottom', $baseLineInEms);
+  //@include rem('margin-bottom', $baseLineInEms);
 }
 .nav ul {
   list-style: none;
@@ -152,7 +152,7 @@ header {
   text-decoration: none;
 }
 .nav ul li a:hover {
-  color: $colorLinkHover;
+  //color: $colorLinkHover;
   text-decoration: underline;
 }
 //.nav ul li.active a,
@@ -332,7 +332,7 @@ Navigation Styles
 }
 
 .nav-main {
-  background: $colorBurgundy;
+  //background: $colorBurgundy;
   height: 72px;
 
   ul {
@@ -349,7 +349,7 @@ Navigation Styles
     }
     a {
       background: rgba(0, 0, 0,.2);
-      font-family: $mainNavFontFamily;
+      //font-family: $mainNavFontFamily;
       letter-spacing: .1em;
       margin-left: 1px;
       color: rgba(255, 255, 255, 1);
@@ -512,7 +512,7 @@ Navigation Styles
 
 
 .sticky {
-  background: $colorBurgundy;
+  //background: $colorBurgundy;
   //box-shadow: 0 5px 10px rgba(0,0,0,.2);
   //height: 60px;
   margin-left: -2em;

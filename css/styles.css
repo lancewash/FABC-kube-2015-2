@@ -1630,6 +1630,7 @@ i.icon.facebook.official {
     top: 0;
   }
   .breadcrumbs ul li a {
+    font-size: .75rem;
     text-decoration: none;
   }
   .breadcrumbs ul li.active a {

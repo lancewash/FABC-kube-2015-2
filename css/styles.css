@@ -5065,7 +5065,7 @@ button:hover, .button:hover {
 }
 
 [class^="unit-"] .button-is-hidden {
-  bottom: -2.75rem;
+  bottom: -3rem;
   left: 0;
   right: 0;
   margin: 0 auto;

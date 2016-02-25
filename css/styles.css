@@ -270,7 +270,7 @@ audio {
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  unicode-range: U+0020-25CA;
+  unicode-range: U20-25CA;
 }
 
 @font-face {
@@ -340,7 +340,8 @@ a {
   color: #BF3313;
 }
 
-a:focus, a:hover {
+a:focus,
+a:hover {
   color: rgba(0, 0, 0, 0.9);
   text-decoration: underline;
 }
@@ -459,18 +460,18 @@ address {
   margin-bottom: 1.6rem;
 }
 
-.intro p, .intro
-ul, .intro
-ol, .intro
-dl, .intro
-blockquote, .intro
-hr, .intro
-pre, .intro
-table, .intro
-form, .intro
-fieldset, .intro
-figure, .intro
-address {
+.intro p,
+.intro ul,
+.intro ol,
+.intro dl,
+.intro blockquote,
+.intro hr,
+.intro pre,
+.intro table,
+.intro form,
+.intro fieldset,
+.intro figure,
+.intro address {
   font-size: 1rem;
   line-height: 1.8;
 }
@@ -1427,6 +1428,7 @@ i.icon.facebook.official {
   margin-right: auto;
   display: block;
   margin-top: 1em;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
@@ -1480,6 +1482,7 @@ i.icon.facebook.official {
     text-indent: -999999em;
     width: 212px;
     z-index: 30;
+    -webkit-transition: all 0.25s ease-in;
     transition: all 0.25s ease-in;
     /*.nav-up & {
         background: url("../img/fabc-joy-logo.png") no-repeat;
@@ -1596,9 +1599,10 @@ i.icon.facebook.official {
     font-size: .9em;
     list-style: none;
     margin: 0 auto;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     opacity: .5;
     text-align: center;
+    -webkit-transition: all 0.35s ease-in-out;
     transition: all 0.35s ease-in-out;
   }
   .breadcrumbs ul:after {
@@ -1653,17 +1657,20 @@ i.icon.facebook.official {
   }
   .nav-top ul {
     border-right: 1px solid rgba(0, 0, 0, 0.05);
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
   .nav-top li {
+    -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
@@ -1691,10 +1698,11 @@ i.icon.facebook.official {
   }
   .nav-top p, .nav-top a {
     font-size: .7rem;
-    padding: .5em 0 .65em;
+    padding: 0.5em 0 0.65em;
   }
   .nav-top p, .nav-top a, .nav-top i {
     color: rgba(0, 0, 0, 0.9);
+    -webkit-transition: all 0.25s;
     transition: all 0.25s;
   }
   .nav-top a i {
@@ -1732,17 +1740,20 @@ i.icon.facebook.official {
     height: 72px;
   }
   .nav-main ul {
+    display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
+    -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
   .nav-main ul li {
+    -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
@@ -1760,8 +1771,10 @@ i.icon.facebook.official {
     color: white;
     padding: 22px 0;
     text-transform: uppercase;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     /*&:before {
             background: #D97B29;
             bottom: 0;
@@ -1820,16 +1833,19 @@ i.icon.facebook.official {
   }
   .nav-main [role=navigation]:hover a {
     opacity: .5;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .nav-main [role=navigation]:hover a:hover {
     color: white;
     opacity: 1;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   .img-link {
     opacity: .75;
     padding-top: .5em;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
   }
   .img-link:hover {
@@ -1852,6 +1868,7 @@ i.icon.facebook.official {
     margin-top: -1px;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: all 1.5s ease;
     transition: all 1.5s ease;
   }
   .sticky li:last-child, .sticky li:first-child {
@@ -1937,7 +1954,8 @@ header {
   -webkit-transform: translateY(0);
       -ms-transform: translateY(0);
           transform: translateY(0);
-  transition: all .75s ease-in-out;
+  -webkit-transition: all 0.75s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
 
 header.header-fixed {
@@ -2002,6 +2020,7 @@ header.header-fixed.slide-reset.headroom-top {
 
 .banner .overlay {
   background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
 
@@ -2057,8 +2076,10 @@ header.header-fixed.slide-reset.headroom-top {
 
 .banner-head-wrap {
   position: absolute;
-  bottom: 0;
+  right: 0;
+  top: 111px;
   width: 100%;
+  width: 116px;
   height: 115px;
   /*p {
       position: absolute;
@@ -2075,36 +2096,40 @@ header.header-fixed.slide-reset.headroom-top {
     }*/
 }
 
-.banner-head-wrap .banner-head {
-  position: relative;
-  bottom: -111px;
+.subpage .banner-head-wrap {
+  left: 0;
   margin: 0 auto;
-  max-width: 1200px;
-  transition: all .5s ease-out;
+  width: 100%;
 }
 
-.subpage .banner-head-wrap .banner-head {
-  bottom: 0;
+.banner-head-wrap .banner-head {
+  position: relative;
+  height: 436px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .banner-head-wrap h1 {
   color: white;
   font-size: 4rem;
-  margin-top: 59px;
+  margin-top: 232px;
   text-align: center;
+  position: relative;
 }
 
 .banner-head-wrap .banner-head-items {
   background: rgba(0, 0, 0, 0.75);
-  height: 130px;
+  height: 110px;
   position: relative;
   width: 24.85%;
+  width: 100%;
   margin-left: 1px;
-  transition: all .25s ease-out;
+  -webkit-transition: all 1s ease-out;
+  transition: all 0.25s ease-out;
 }
 
 .banner-head-wrap .banner-head-items [class$="-link"] {
-  border-top-style: solid;
+  border-left-style: solid;
   border-width: 4px;
 }
 
@@ -2117,30 +2142,33 @@ header.header-fixed.slide-reset.headroom-top {
   color: white;
   font-weight: 800;
   display: block;
-  height: 130px;
+  height: 110px;
   letter-spacing: 2px;
   padding: 4em 0 0;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all .25s ease-out;
+  -webkit-transition: all 1s ease-out;
+  transition: all 0.25s ease-out;
 }
 
 .banner-head-wrap a:hover {
-  margin-top: -5px;
+  margin-left: -5px;
 }
 
 .button-banner {
   display: inline-block;
   margin-top: 1.75rem;
-  padding: 1em 0 .75em;
+  padding: 1em 0 0.75em;
   min-width: 50%;
   max-width: 200px;
-  transition: all .25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
 
 .banner-items {
-  transition: all .25s ease-out;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
   font-size: 75%;
   /* i {
     color: rgba(0,0,0,.5);
@@ -2155,8 +2183,8 @@ header.header-fixed.slide-reset.headroom-top {
 
 .banner-items span {
   display: block;
-  font-size: .9rem;
-  margin-top: .5rem;
+  font-size: .5rem;
+  line-height: 1.5;
 }
 
 .banner-items:hover .banner-items {
@@ -2164,12 +2192,12 @@ header.header-fixed.slide-reset.headroom-top {
 }
 
 .service-time-link {
-  background: url("../img/time.png") no-repeat 50% 20% rgba(235, 193, 52, 0.4);
+  background: url("../img/time.png") no-repeat 50% 30% rgba(235, 193, 52, 0.4);
   border-color: #ebc134;
 }
 
 .service-time-link:hover {
-  background: url("../img/time.png") no-repeat 50% 20% rgba(235, 193, 52, 0.85);
+  background: url("../img/time.png") no-repeat 50% 30% rgba(235, 193, 52, 0.85);
 }
 
 .service-time-link .button-banner {
@@ -2177,12 +2205,12 @@ header.header-fixed.slide-reset.headroom-top {
 }
 
 .calendar-link {
-  background: url("../img/calendar.png") no-repeat 50% 20% rgba(0, 93, 131, 0.4);
+  background: url("../img/calendar.png") no-repeat 50% 30% rgba(0, 93, 131, 0.4);
   border-color: #005d83;
 }
 
 .calendar-link:hover {
-  background: url("../img/calendar.png") no-repeat 50% 20% rgba(0, 93, 131, 0.85);
+  background: url("../img/calendar.png") no-repeat 50% 30% rgba(0, 93, 131, 0.85);
 }
 
 .calendar-link .button-banner {
@@ -2190,12 +2218,12 @@ header.header-fixed.slide-reset.headroom-top {
 }
 
 .sunday-chron-link {
-  background: url("../img/sunday-chron.png") no-repeat 50% 20% rgba(120, 147, 48, 0.4);
+  background: url("../img/sunday-chron.png") no-repeat 50% 30% rgba(120, 147, 48, 0.4);
   border-color: #789330;
 }
 
 .sunday-chron-link:hover {
-  background: url("../img/sunday-chron.png") no-repeat 50% 20% rgba(120, 147, 48, 0.85);
+  background: url("../img/sunday-chron.png") no-repeat 50% 30% rgba(120, 147, 48, 0.85);
 }
 
 .sunday-chron-link .button-banner {
@@ -2203,12 +2231,12 @@ header.header-fixed.slide-reset.headroom-top {
 }
 
 .sermons-link {
-  background: url("../img/sermons.png") no-repeat 50% 20% rgba(191, 51, 19, 0.4);
+  background: url("../img/sermons.png") no-repeat 50% 30% rgba(191, 51, 19, 0.4);
   border-color: #bf3313;
 }
 
 .sermons-link:hover {
-  background: url("../img/sermons.png") no-repeat 50% 20% rgba(191, 51, 19, 0.85);
+  background: url("../img/sermons.png") no-repeat 50% 30% rgba(191, 51, 19, 0.85);
 }
 
 .sermons-link .button-banner {
@@ -2245,6 +2273,7 @@ Slick Slider
   -moz-box-sizing: border-box;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -2286,7 +2315,8 @@ Slick Slider
   height: 550px;
 }
 
-.slick-track:before, .slick-track:after {
+.slick-track:before,
+.slick-track:after {
   content: "";
   display: table;
 }
@@ -2549,12 +2579,14 @@ html.remodal-is-locked {
   margin: 0;
   padding: 0;
   cursor: pointer;
+  -webkit-transition: color 0.2s;
   transition: color 0.2s;
   text-decoration: none;
   border: 0;
   outline: 0;
   background: url("../img/close-x.png") no-repeat;
   opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
@@ -2574,6 +2606,7 @@ html.remodal-is-locked {
   margin: 0;
   padding: 12px 0;
   cursor: pointer;
+  -webkit-transition: background 0.2s;
   transition: background 0.2s;
   text-align: center;
   vertical-align: middle;
@@ -4876,7 +4909,8 @@ input[type="date"],
 input[type="search"],
 input[type="datetime-local"],
 textarea {
-  transition: border ease 0.5s;
+  -webkit-transition: border ease 0.5s;
+          transition: border ease 0.5s;
 }
 
 input[type="range"] {
@@ -5024,7 +5058,8 @@ button, .button {
   background-color: #BF3313;
   border-color: #007095;
   color: #fff;
-  transition: background-color 300ms ease-out;
+  -webkit-transition: background-color 300ms ease-out;
+          transition: background-color 300ms ease-out;
   text-transform: uppercase;
 }
 
@@ -5040,9 +5075,9 @@ button:hover, .button:hover {
   margin: 0 auto;
   margin: 0 auto;
   position: absolute;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 [class^="unit-"]:hover {
@@ -5076,9 +5111,9 @@ button:hover, .button:hover {
   right: 0;
   margin: 0 auto;
   position: absolute;
-  transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -webkit-transition: all .5s ease;
+  transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
 }
 
 .content-row-wrap .large-6:hover {
@@ -5205,6 +5240,7 @@ button:hover, .button:hover {
 }
 
 .content-wrap {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -5230,6 +5266,7 @@ button:hover, .button:hover {
 
 .content-wrap:not([class^="p-"]) {
   min-height: 300px;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -5245,6 +5282,7 @@ button:hover, .button:hover {
 
 .content-wrap .row {
   overflow: hidden;
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -5323,9 +5361,12 @@ button:hover, .button:hover {
 }
 
 .content-item {
+  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -5387,7 +5428,8 @@ div.episode,
 .inverted-wrap-item {
   background: rgba(0, 0, 0, 0.35);
   padding: 1.5em 2.5em 4.5em;
-  transition: all .25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 
 div.episode:hover h3.episode_name,
@@ -5395,8 +5437,8 @@ div.episode:hover h3.episode_name,
   color: white;
 }
 
-.remodal div.episode, .remodal
-.inverted-wrap-item {
+.remodal div.episode,
+.remodal .inverted-wrap-item {
   background: none;
 }
 
@@ -5441,7 +5483,7 @@ div.episode li a:hover,
   font-size: 1.75rem;
   font-weight: 800;
   height: 100%;
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   position: absolute;
   width: 4.5em;
 }
@@ -5481,6 +5523,7 @@ div.episode h3.episode_name {
 
 p, a {
   text-decoration: none;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
@@ -5541,6 +5584,7 @@ hr {
   right: 0;
   margin: 0 auto;
   opacity: 0;
+  -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
 
@@ -5562,6 +5606,7 @@ hr {
   right: 0;
   margin: 0 auto;
   opacity: 1;
+  -webkit-transition: all 15s ease-in-out;
   transition: all 1s ease-in-out;
 }
 
@@ -5644,6 +5689,7 @@ li {
   position: relative;
   min-height: 300px;
   overflow: hidden;
+  -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
 
@@ -5782,6 +5828,7 @@ body div.episode div.buzz_share div.buzz_share_item a:hover {
   position: relative;
   opacity: 0;
   filter: alpha(opacity=0);
+  -webkit-transition: opacity 4s 1s;
   transition: opacity 4s 1s;
 }
 

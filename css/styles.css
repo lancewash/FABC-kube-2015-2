@@ -1721,7 +1721,6 @@ i.icon.facebook.official {
     min-width: 280px;
   }
   .nav-top .nav-icon {
-    border-right: 1px solid rgba(0, 0, 0, 0.05);
     float: left;
     margin-bottom: 1px;
     min-width: 100px;
@@ -1731,9 +1730,6 @@ i.icon.facebook.official {
   }
   .nav-top .nav-icon:hover {
     text-decoration: none;
-  }
-  .nav-top .nav-icon:first-child {
-    border-left: 1px solid rgba(0, 0, 0, 0.05);
   }
   .nav-main {
     background: #3c0308;
